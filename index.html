@@ -35,11 +35,11 @@
   .logo-text strong { font-size: 14px; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
   .logo-text small { font-size: 10px; font-weight: 500; color: var(--text-mute); letter-spacing: 0.1em; text-transform: uppercase; }
   .nav-links { display: flex; gap: 32px; align-items: center; }
-  .nav-links a { color: var(--text-soft); font-size: 14px; font-weight: 500; transition: color .15s; }
-  .nav-links a:hover { color: var(--navy); }
-  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: all .2s; cursor: pointer; border: none; }
-  .btn-primary { background: var(--accent); color: white; }
-  .btn-primary:hover { background: #8e1f27; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(175,39,48,0.3); }
+  .nav-links a:not(.btn) { color: var(--text-soft); font-size: 14px; font-weight: 500; transition: color .15s; }
+  .nav-links a:not(.btn):hover { color: var(--navy); }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: all .2s; cursor: pointer; border: none; text-decoration: none; }
+  a.btn-primary, .btn-primary { background: var(--accent); color: #ffffff; }
+  a.btn-primary:hover, .btn-primary:hover { background: #8e1f27; color: #ffffff; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(175,39,48,0.3); }
   .btn-ghost { background: transparent; color: var(--text-soft); border: 1px solid var(--border); backdrop-filter: blur(4px); }
   .btn-ghost:hover { border-color: var(--navy); color: var(--navy); }
 
@@ -51,11 +51,7 @@
     color: white;
     isolation: isolate;
   }
-  /* Aurora gradient blobs */
-  .hero-aurora {
-    position: absolute; inset: -20%; z-index: 0; pointer-events: none;
-    filter: blur(80px); opacity: 0.85;
-  }
+  .hero-aurora { position: absolute; inset: -20%; z-index: 0; pointer-events: none; filter: blur(80px); opacity: 0.85; }
   .blob { position: absolute; border-radius: 50%; mix-blend-mode: screen; will-change: transform; }
   .blob-1 { width: 50vw; height: 50vw; background: radial-gradient(circle, #1e4a8a 0%, transparent 65%); top: -10%; left: -10%; animation: blobFloat1 22s ease-in-out infinite; }
   .blob-2 { width: 40vw; height: 40vw; background: radial-gradient(circle, #af2730 0%, transparent 65%); top: 30%; right: -10%; animation: blobFloat2 28s ease-in-out infinite; }
@@ -66,41 +62,29 @@
   @keyframes blobFloat3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(10%, -15%) scale(1.2); } }
   @keyframes blobFloat4 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-8%, 12%) scale(1.05); } }
 
-  /* Particle network canvas */
   #neural-canvas { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
 
-  /* Animated grid */
   .hero-grid {
     position: absolute; inset: 0; z-index: 1; pointer-events: none;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
     background-size: 56px 56px;
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
     animation: gridDrift 60s linear infinite;
   }
   @keyframes gridDrift { 0% { background-position: 0 0; } 100% { background-position: 56px 56px; } }
 
-  /* Floating tokens */
   .token-stream { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
   .token {
-    position: absolute;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: rgba(212,165,116,0.55);
-    background: rgba(10,31,61,0.4);
+    position: absolute; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: rgba(212,165,116,0.55); background: rgba(10,31,61,0.4);
     border: 1px solid rgba(212,165,116,0.25);
-    padding: 3px 9px;
-    border-radius: 999px;
-    white-space: nowrap;
+    padding: 3px 9px; border-radius: 999px; white-space: nowrap;
     backdrop-filter: blur(4px);
-    animation: tokenFloat linear infinite;
-    will-change: transform, opacity;
+    animation: tokenFloat linear infinite; will-change: transform, opacity;
   }
   @keyframes tokenFloat {
     0% { transform: translateY(20px); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
+    10% { opacity: 1; } 90% { opacity: 1; }
     100% { transform: translateY(-100vh); opacity: 0; }
   }
 
@@ -110,34 +94,19 @@
     display: inline-flex; align-items: center; gap: 8px;
     padding: 6px 14px; border-radius: 999px;
     background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.95);
-    font-size: 13px; font-weight: 600;
-    margin-bottom: 28px;
-    border: 1px solid rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
+    font-size: 13px; font-weight: 600; margin-bottom: 28px;
+    border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(8px);
   }
   .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; box-shadow: 0 0 0 0 var(--green); }
   @keyframes pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(47,133,90,0.7); } 50% { opacity: 0.4; box-shadow: 0 0 0 8px rgba(47,133,90,0); } }
 
-  h1 {
-    font-size: clamp(38px, 5.8vw, 68px);
-    font-weight: 800; letter-spacing: -0.03em; line-height: 1.04;
-    margin-bottom: 24px;
-    color: white;
-  }
-  h1 .highlight {
-    background: linear-gradient(120deg, #ffffff 0%, #d4a574 50%, #af2730 100%);
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-    background-size: 200% auto;
-    animation: shimmer 8s ease-in-out infinite;
-  }
+  h1 { font-size: clamp(38px, 5.8vw, 68px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.04; margin-bottom: 24px; color: white; }
+  h1 .highlight { background: linear-gradient(120deg, #ffffff 0%, #d4a574 50%, #af2730 100%); -webkit-background-clip: text; background-clip: text; color: transparent; background-size: 200% auto; animation: shimmer 8s ease-in-out infinite; }
   @keyframes shimmer { 0%,100% { background-position: 0% center; } 50% { background-position: 100% center; } }
-  .hero p.lead {
-    font-size: clamp(17px, 1.5vw, 20px);
-    color: rgba(255,255,255,0.85); max-width: 680px; margin-bottom: 36px;
-  }
+  .hero p.lead { font-size: clamp(17px, 1.5vw, 20px); color: rgba(255,255,255,0.85); max-width: 680px; margin-bottom: 36px; }
   .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
   .btn-lg { padding: 14px 24px; font-size: 15px; }
-  .btn-primary.btn-lg { box-shadow: 0 8px 24px rgba(175,39,48,0.35); }
+  a.btn-primary.btn-lg, .btn-primary.btn-lg { box-shadow: 0 8px 24px rgba(175,39,48,0.35); }
   .hero .btn-ghost { color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.05); }
   .hero .btn-ghost:hover { color: white; border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.1); }
 
@@ -145,7 +114,6 @@
   .meta-item .num { font-size: 32px; font-weight: 800; color: white; letter-spacing: -0.02em; font-family: 'JetBrains Mono', monospace; }
   .meta-item .lbl { font-size: 13px; color: rgba(255,255,255,0.65); margin-top: 2px; }
 
-  /* ============ Sections ============ */
   section { padding: 88px 0; }
   .section-tag { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 14px; }
   h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px; }
@@ -448,7 +416,6 @@
 </footer>
 
 <script>
-// ============ Neural Particle Network ============
 (function(){
   const canvas = document.getElementById('neural-canvas');
   const hero = document.querySelector('.hero');
@@ -482,8 +449,6 @@
   function tick(){
     const w = W/devicePixelRatio, h = H/devicePixelRatio;
     ctx.clearRect(0, 0, w, h);
-
-    // Update + draw particles
     for (let p of particles) {
       p.x += p.vx; p.y += p.vy;
       if (p.x < 0 || p.x > w) p.vx *= -1;
@@ -493,7 +458,6 @@
       ctx.fillStyle = 'rgba(212, 165, 116, 0.55)';
       ctx.fill();
     }
-    // Draw lines between near particles
     const maxDist = 130;
     for (let i=0; i<particles.length; i++){
       for (let j=i+1; j<particles.length; j++){
@@ -520,7 +484,6 @@
   }
 })();
 
-// ============ Floating LLM tokens ============
 (function(){
   const stream = document.getElementById('token-stream');
   if (!stream || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -542,7 +505,6 @@
     stream.appendChild(t);
     setTimeout(() => t.remove(), dur * 1000 + 200);
   }
-  // initial burst staggered
   for (let i=0; i<6; i++) setTimeout(spawnToken, i * 1500);
   setInterval(spawnToken, 2200);
 })();
