@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1f3d"/>
+      <stop offset="100%" stop-color="#051026"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="80%" cy="25%" r="55%">
+      <stop offset="0%" stop-color="#af2730" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#af2730" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="15%" cy="75%" r="45%">
+      <stop offset="0%" stop-color="#1e4a8a" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#1e4a8a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g3" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#d4a574" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#d4a574" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="textHighlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#d4a574"/>
+      <stop offset="100%" stop-color="#af2730"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#g3)"/>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <rect width="1200" height="630" fill="url(#g2)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <g transform="translate(64, 56)">
+    <text x="0" y="32" font-family="Inter, Arial Black, sans-serif" font-size="42" font-weight="900" fill="#af2730" letter-spacing="-1">SATE</text>
+    <line x1="125" y1="6" x2="125" y2="34" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="140" y="22" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" letter-spacing="2">SOVEREIGN</text>
+    <text x="140" y="40" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" fill="#94a3b8" letter-spacing="2">AI INFERENCE EU</text>
+  </g>
+  <g transform="translate(900, 60)">
+    <rect x="0" y="0" width="240" height="36" rx="18" fill="rgba(255,255,255,0.08)" stroke="rgba(212,165,116,0.4)" stroke-width="1"/>
+    <circle cx="22" cy="18" r="4" fill="#2f855a"/>
+    <text x="36" y="23" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Beta Q3 2026 · Hosted in Italy</text>
+  </g>
+  <text x="64" y="262" font-family="Inter, Arial Black, sans-serif" font-size="68" font-weight="900" fill="#ffffff" letter-spacing="-2.5">L'AI che programma</text>
+  <text x="64" y="346" font-family="Inter, Arial Black, sans-serif" font-size="68" font-weight="900" letter-spacing="-2.5" fill="url(#textHighlight)">le tue macchine.</text>
+  <text x="64" y="416" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="rgba(255,255,255,0.85)">Codice PLC, robotica custom, automazione industriale.</text>
+  <text x="64" y="450" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="rgba(255,255,255,0.85)">5× più veloce. 100% sovrana, ospitata in Italia.</text>
+  <g transform="translate(64, 530)">
+    <rect x="0" y="0" width="208" height="44" rx="22" fill="rgba(255,255,255,0.06)" stroke="rgba(212,165,116,0.35)" stroke-width="1"/>
+    <text x="104" y="28" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">GDPR · AI Act · NIS2</text>
+  </g>
+  <g transform="translate(290, 530)">
+    <rect x="0" y="0" width="240" height="44" rx="22" fill="rgba(255,255,255,0.06)" stroke="rgba(212,165,116,0.35)" stroke-width="1"/>
+    <text x="120" y="28" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">Compatibile OpenAI · OpenHands</text>
+  </g>
+  <g transform="translate(548, 530)">
+    <rect x="0" y="0" width="200" height="44" rx="22" fill="rgba(255,255,255,0.06)" stroke="rgba(212,165,116,0.35)" stroke-width="1"/>
+    <text x="100" y="28" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">256 GB · Hermes 405B</text>
+  </g>
+  <g transform="translate(940, 320)" opacity="0.85">
+    <line x1="-130" y1="-110" x2="0" y2="0" stroke="#d4a574" stroke-width="1.2" opacity="0.45"/>
+    <line x1="100" y1="-130" x2="0" y2="0" stroke="#d4a574" stroke-width="1.2" opacity="0.45"/>
+    <line x1="-105" y1="125" x2="0" y2="0" stroke="#d4a574" stroke-width="1.2" opacity="0.45"/>
+    <line x1="135" y1="80" x2="0" y2="0" stroke="#d4a574" stroke-width="1.2" opacity="0.45"/>
+    <line x1="-160" y1="0" x2="0" y2="0" stroke="#d4a574" stroke-width="1.2" opacity="0.45"/>
+    <line x1="160" y1="-30" x2="0" y2="0" stroke="#d4a574" stroke-width="1.2" opacity="0.45"/>
+    <line x1="-130" y1="-110" x2="100" y2="-130" stroke="#d4a574" stroke-width="0.8" opacity="0.22"/>
+    <line x1="-105" y1="125" x2="135" y2="80" stroke="#d4a574" stroke-width="0.8" opacity="0.22"/>
+    <line x1="-160" y1="0" x2="-130" y2="-110" stroke="#d4a574" stroke-width="0.8" opacity="0.22"/>
+    <line x1="160" y1="-30" x2="135" y2="80" stroke="#d4a574" stroke-width="0.8" opacity="0.22"/>
+    <circle cx="0" cy="0" r="22" fill="rgba(175,39,48,0.25)"/>
+    <circle cx="0" cy="0" r="14" fill="#af2730"/>
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#af2730" stroke-width="1" opacity="0.45"/>
+    <text x="0" y="4" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="800" fill="#d4a574" text-anchor="middle">405B</text>
+    <circle cx="-130" cy="-110" r="7" fill="#d4a574"/>
+    <circle cx="-130" cy="-110" r="11" fill="none" stroke="#d4a574" stroke-width="0.6" opacity="0.4"/>
+    <circle cx="100" cy="-130" r="7" fill="#d4a574"/>
+    <circle cx="100" cy="-130" r="11" fill="none" stroke="#d4a574" stroke-width="0.6" opacity="0.4"/>
+    <circle cx="-105" cy="125" r="7" fill="#d4a574"/>
+    <circle cx="135" cy="80" r="7" fill="#d4a574"/>
+    <circle cx="-160" cy="0" r="7" fill="#d4a574"/>
+    <circle cx="160" cy="-30" r="7" fill="#d4a574"/>
+    <circle cx="-65" cy="-55" r="3.5" fill="#fff8e6"/>
+    <circle cx="-65" cy="-55" r="7" fill="rgba(255,225,180,0.4)"/>
+    <circle cx="80" cy="50" r="3.5" fill="#fff8e6"/>
+    <circle cx="80" cy="50" r="7" fill="rgba(255,225,180,0.4)"/>
+  </g>
+  <text x="1136" y="603" font-family="JetBrains Mono, Monaco, monospace" font-size="14" fill="rgba(255,255,255,0.55)" text-anchor="end">sate-sovereign.eu</text>
+</svg>
