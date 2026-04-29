@@ -8,6 +8,16 @@
 <meta property="og:title" content="SATE Sovereign — AI per l'automazione industriale" />
 <meta property="og:description" content="Acceleri di 5× lo sviluppo PLC e robotica. Integra OpenHands e Hermes. Hosted in Italy." />
 <meta property="og:type" content="website" />
+<meta property="og:image" content="https://sate-sovereign-site.onrender.com/og-image.svg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://sate-sovereign-site.onrender.com/" />
+<meta property="og:locale" content="it_IT" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SATE Sovereign — AI per l'automazione industriale" />
+<meta name="twitter:description" content="Acceleri di 5× lo sviluppo PLC e robotica. Hosted in Italy." />
+<meta name="twitter:image" content="https://sate-sovereign-site.onrender.com/og-image.svg" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"SATE Sovereign","url":"https://sate-sovereign-site.onrender.com/","logo":"https://lirp.cdn-website.com/43b57a5e/dms3rep/multi/opt/Logo+-+nuovo-1920w.png","description":"AI sovrana per l'automazione industriale: codice PLC, robotica, documentazione tecnica. Hosted in Italy, GDPR-native, AI Act ready.","parentOrganization":{"@type":"Organization","name":"SATE S.R.L.","url":"https://www.sate.eu","taxID":"IT01132460476","address":{"@type":"PostalAddress","streetAddress":"Via Quattro Querci 7, Masotti","addressLocality":"Serravalle Pistoiese","postalCode":"51030","addressRegion":"PT","addressCountry":"IT"}}}</script>
 <link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/43b57a5e/site_favicon_16_1773238209695.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +44,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdr
 .logo-text{display:flex;flex-direction:column;line-height:1.15}
 .logo-text strong{font-size:14px;font-weight:700;color:var(--navy);letter-spacing:-0.01em}
 .logo-text small{font-size:10px;font-weight:500;color:var(--text-mute);letter-spacing:0.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links{display:flex;gap:22px;align-items:center}
 .nav-links a:not(.btn){color:var(--text-soft);font-size:14px;font-weight:500;transition:color .15s}
 .nav-links a:not(.btn):hover{color:var(--navy)}
 .btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:8px;font-weight:600;font-size:14px;transition:all .2s;cursor:pointer;border:none;text-decoration:none}
@@ -306,6 +316,41 @@ h2{font-size:clamp(30px,3.6vw,44px);font-weight:800;letter-spacing:-0.025em;line
 .price-list li::before{content:"\2713";position:absolute;left:0;color:var(--green);font-weight:700}
 .price-card.featured .price-list li::before{color:var(--gold)}
 
+.calc{max-width:920px;margin:0 auto 56px;background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);color:#fff;border-radius:20px;padding:40px;box-shadow:0 24px 60px rgba(10,31,61,0.18);position:relative;overflow:hidden}
+.calc::before{content:"";position:absolute;top:-50%;right:-30%;width:60%;height:200%;background:radial-gradient(ellipse,rgba(212,165,116,0.15) 0%,transparent 60%);pointer-events:none}
+.calc-title{font-size:11px;font-weight:700;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:32px;position:relative}
+.calc-row{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:32px;position:relative}
+@media(max-width:700px){.calc-row{grid-template-columns:1fr}}
+.calc-control label{font-size:11px;font-weight:700;letter-spacing:0.1em;color:rgba(255,255,255,0.65);text-transform:uppercase;display:block;margin-bottom:14px}
+.calc-control input[type="range"]{width:100%;-webkit-appearance:none;appearance:none;height:6px;background:rgba(255,255,255,0.18);border-radius:3px;outline:none;cursor:pointer}
+.calc-control input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--gold);cursor:pointer;box-shadow:0 4px 14px rgba(212,165,116,0.6);border:2px solid #fff}
+.calc-control input[type="range"]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--gold);cursor:pointer;border:2px solid #fff;box-shadow:0 4px 14px rgba(212,165,116,0.6)}
+.calc-control output{display:block;text-align:right;font-size:26px;font-weight:800;color:var(--gold);font-family:'JetBrains Mono',monospace;margin-top:8px;line-height:1}
+.calc-tiers{display:flex;gap:8px}
+.calc-tiers button{flex:1;padding:12px 8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);color:#fff;border-radius:8px;font-weight:600;font-size:13px;cursor:pointer;transition:all .2s;font-family:inherit}
+.calc-tiers button:hover{background:rgba(255,255,255,0.12)}
+.calc-tiers button.active{background:var(--accent);border-color:var(--accent);box-shadow:0 4px 14px rgba(175,39,48,0.4)}
+.calc-result{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.15);position:relative}
+@media(max-width:700px){.calc-result{grid-template-columns:1fr}}
+.calc-out{text-align:center}
+.calc-label{font-size:11px;font-weight:700;letter-spacing:0.1em;color:rgba(255,255,255,0.6);text-transform:uppercase;margin-bottom:10px}
+.calc-num{font-size:32px;font-weight:800;color:#fff;letter-spacing:-0.02em;font-family:'JetBrains Mono',monospace;line-height:1.1}
+.calc-eq{font-size:18px;font-weight:700;color:var(--gold);font-family:'JetBrains Mono',monospace;line-height:1.2}
+.calc-roi{font-size:32px;font-weight:800;color:#5fbf7e;letter-spacing:-0.02em;font-family:'JetBrains Mono',monospace;line-height:1.1}
+
+.faq{background:var(--bg-alt);padding:96px 0}
+.faq-list{max-width:840px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .2s}
+.faq-item[open]{border-color:var(--accent);box-shadow:0 8px 24px rgba(10,31,61,0.08)}
+.faq-item summary{padding:22px 28px;cursor:pointer;font-weight:700;font-size:16px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .15s}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:26px;font-weight:300;color:var(--accent);transition:transform .25s;flex-shrink:0;line-height:1}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:hover{color:var(--accent)}
+.faq-body{padding:0 28px 26px;color:var(--text-soft);font-size:15px;line-height:1.7}
+.faq-body strong{color:var(--navy);font-weight:600}
+.faq-body code{background:rgba(175,39,48,0.08);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent)}
+
 .compliance{background:var(--navy);color:#fff;padding:88px 0;position:relative;overflow:hidden}
 .compliance::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 80% 30%,rgba(175,39,48,0.18) 0%,transparent 50%)}
 .compliance-inner{position:relative}
@@ -355,6 +400,7 @@ code.inline{background:rgba(175,39,48,0.08);padding:2px 8px;border-radius:5px;fo
       <a href="#dev">Developer</a>
       <a href="#kd">Distillazione</a>
       <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
       <a href="#contatti" class="btn btn-primary">Richiedi demo</a>
     </nav>
   </div>
@@ -725,6 +771,40 @@ code.inline{background:rgba(175,39,48,0.08);padding:2px 8px;border-radius:5px;fo
       <h2>Per ingegnere o per cluster dedicato.</h2>
       <p>Un costo prevedibile, in euro, fatturato in Italia. Il break-even arriva spesso al primo progetto.</p>
     </div>
+
+    <div class="calc">
+      <div class="calc-title">Calcola il tuo costo mensile</div>
+      <div class="calc-row">
+        <div class="calc-control">
+          <label>Engineer del team</label>
+          <input type="range" id="calc-eng" min="1" max="50" value="5"/>
+          <output id="calc-eng-val">5</output>
+        </div>
+        <div class="calc-control">
+          <label>Tier</label>
+          <div class="calc-tiers">
+            <button data-tier="99" data-name="Light">Light · €99</button>
+            <button data-tier="249" data-name="Pro" class="active">Pro · €249</button>
+            <button data-tier="590" data-name="Max">Max · €590</button>
+          </div>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-out">
+          <div class="calc-label">Costo mensile</div>
+          <div class="calc-num" id="calc-monthly">€ 1.245</div>
+        </div>
+        <div class="calc-out">
+          <div class="calc-label">Equivale a</div>
+          <div class="calc-eq" id="calc-equiv">≈ 0,4 ingegneri junior</div>
+        </div>
+        <div class="calc-out">
+          <div class="calc-label">ROI primo anno</div>
+          <div class="calc-roi" id="calc-roi">+285%</div>
+        </div>
+      </div>
+    </div>
+
     <div class="price-grid">
       <div class="price-card">
         <div class="price-tier">Per engineer</div>
@@ -782,6 +862,78 @@ code.inline{background:rgba(175,39,48,0.08);padding:2px 8px;border-radius:5px;fo
   </div>
 </section>
 
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-head center">
+      <div class="section-tag">FAQ</div>
+      <h2>Domande frequenti.</h2>
+      <p>Quello che il team tecnico, il CFO e il DPO vogliono sapere prima di firmare.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Il modello vede i miei prompt? Possono essere usati per addestrare modelli di altri clienti?</summary>
+        <div class="faq-body">
+          <p>No, in due sensi. <strong>Primo</strong>: i prompt non vengono persistiti su disco oltre la durata della richiesta — solo metadati anonimi (tenant ID, timestamp, conteggio token, latenza) per billing e capacity planning. <strong>Secondo</strong>: i tuoi prompt non vengono mai usati per addestrare modelli condivisi. Il knowledge distillation notturno avviene solo su interazioni che il tuo team marca esplicitamente come "successo", e il LoRA risultante resta nel tuo tenant — non è condiviso con altri clienti né usato come dataset pubblico.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Che differenza c'è con Mistral, Aleph Alpha o OpenAI?</summary>
+        <div class="faq-body">
+          <p><strong>Vs OpenAI/Anthropic</strong>: noi siamo in Italia, sotto giurisdizione esclusiva UE, niente CLOUD Act. Prezzi 35-65% più bassi a parità di tier. <strong>Vs Mistral / Aleph Alpha</strong>: loro sono ottimi per enterprise da 10k+ utenti; noi siamo costruiti per le PMI italiane che non possono permettersi quei contratti. Inoltre offriamo Knowledge Distillation Layer notturno e fine-tuning su IP cliente — funzionalità che gli hyperscaler sovrani europei non hanno standard. <strong>Vs tutti</strong>: il nostro vantaggio è la specializzazione sul codice industriale (PLC, robotica) e la possibilità di on-prem completo air-gapped.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Posso fare on-prem completo, anche air-gapped?</summary>
+        <div class="faq-body">
+          <p>Sì. Il tier <strong>Enterprise</strong> include la fornitura del cluster fisico nel tuo data center con configurazione air-gapped opzionale — nessuna connessione internet richiesta dopo la setup iniziale. Aggiorni i modelli via download offline (file firmati). Tipicamente scelgono questa configurazione PA, sanità, difesa e manifatturiere con IP critico. Il pricing parte da € 2.400/mese e include hardware, manutenzione, aggiornamenti modelli e supporto onsite SATE.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Come fatturate? Avete IVA italiana?</summary>
+        <div class="faq-body">
+          <p>Sì. SATE S.R.L. è iscritta in Italia (P.IVA <code>01132460476</code>, REA PT-121825). Fatturazione elettronica via SDI, IVA 22% applicata in Italia, reverse charge per i clienti EU con P.IVA UE valida (verifica VIES automatica). Pagamento a 30/60 giorni su bonifico, oppure SEPA Direct Debit per i clienti ricorrenti. Niente Stripe US, niente abbonamento via App Store — tutto B2B classico italiano.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Supportate IEC 61131-3 v3? E le specifiche di ciascun vendor?</summary>
+        <div class="faq-body">
+          <p>Sì per IEC 61131-3 v3 (LD, ST, FBD, IL, SFC). I modelli sono stati esposti durante il fine-tuning a corpus di codice reale per i principali ecosistemi: <strong>Siemens TIA Portal V18+ / SCL</strong>, <strong>B&amp;R Automation Studio 4.x e 6.x</strong>, <strong>CODESYS V3.5 + libraries</strong>, <strong>Rockwell Studio 5000</strong>, <strong>Beckhoff TwinCAT 3</strong>, <strong>Schneider EcoStruxure</strong>. Per la robotica: <strong>RAPID</strong> (ABB), <strong>KRL</strong> (KUKA), <strong>Karel</strong> (FANUC), <strong>INFORM</strong> (Yaskawa), <strong>URScript</strong> (Universal Robots), oltre a ROS 2 e MoveIt. Se il tuo stack ha specificità custom, il LoRA notturno lo impara dai tuoi progetti.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto velocemente possiamo iniziare?</summary>
+        <div class="faq-body">
+          <p>Per il tier <strong>Cloud</strong> (Light/Pro/Max): 24 ore per attivare l'API key e fornire credenziali team. Demo guidata di 30 minuti gratuita prima della firma per validare sul tuo codice reale. Per il tier <strong>Enterprise</strong> on-prem: tipicamente 4-6 settimane dall'ordine al go-live, di cui 2 di lead time hardware Strix Halo + 2-3 di setup, network, training operativo. Beta privata Q3 2026 — i partner industriali selezionati hanno crediti API gratuiti per 3 mesi e sconto 50% sui primi 6 mesi.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Cosa succede se Hermes 4 (o un altro modello) viene aggiornato?</summary>
+        <div class="faq-body">
+          <p>Aggiornamenti modello base sono trasparenti per il cliente: testati internamente su benchmark di regressione (MMLU, HumanEval, MT-Bench) prima del deploy. Se l'upgrade del modello base rompe il tuo LoRA, il sistema fa rollback automatico al modello precedente per il tuo tenant fino a quando il LoRA non viene riadattato (1 ciclo notturno). Hai accesso storico ai LoRA delle ultime 30 versioni — puoi sempre tornare indietro a una versione che funzionava.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Posso fare fine-tuning sul mio codice proprietario? Chi ne è proprietario?</summary>
+        <div class="faq-body">
+          <p>Sì, il fine-tuning via LoRA è incluso dal tier Pro in su (knowledge distillation notturna), ed è esteso al fine-tuning manuale su batch storici nel tier Enterprise. <strong>Il LoRA risultante è di proprietà del cliente</strong>: contrattualmente il "modello specializzato sul tuo IP" è tuo, non nostro. In caso di disdetta, riceverai i pesi LoRA (file safetensors) per portarli altrove. Il modello base resta licenziato da noi, ma esiste libero come open-weight (Llama, Hermes, Mistral) — non sei mai bloccato.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Quale SLA di disponibilità garantite?</summary>
+        <div class="faq-body">
+          <p>Tier Light/Pro/Max: <strong>99% mensile</strong> (best effort, credit refund proporzionale per minuti di downtime sopra soglia). Tier Enterprise: <strong>99,5% contrattuale</strong> con penali, supporto telefonico H24 5×8 (24×7 opzionale), tempo di intervento garantito 4 ore in orario d'ufficio. Manutenzione programmata 1× al mese in finestra notturna concordata. Status page pubblica su <code>status.sate-sovereign.eu</code> (in arrivo) con uptime e latenze in tempo reale.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Funziona con i nostri tool di sviluppo? Plugin per TIA, Automation Studio, RobotStudio?</summary>
+        <div class="faq-body">
+          <p>Tre vie di integrazione. <strong>(1)</strong> API OpenAI-compatibile: usi qualsiasi tool che parla con OpenAI (Continue.dev, Cursor, Cline, Aider, GitHub Copilot Enterprise via proxy). <strong>(2)</strong> OpenHands installato in azienda: agente autonomo che opera sul tuo repo Git interno. <strong>(3)</strong> Plugin nativi (in roadmap Q1-Q2 2027): estensioni per TIA Portal, B&amp;R Automation Studio, CODESYS, RobotStudio, RoboGuide. Nel frattempo l'integrazione con VS Code (con cui molti team automation lavorano in parallelo) è già completa via le estensioni standard.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section id="contatti" class="cta-section">
   <div class="container">
     <div class="cta-card">
@@ -808,7 +960,7 @@ code.inline{background:rgba(175,39,48,0.08);padding:2px 8px;border-radius:5px;fo
       </div>
       <div>
         <h4>Prodotto</h4>
-        <ul><li><a href="#chi">Chi è per</a></li><li><a href="#roi">ROI</a></li><li><a href="#robotica">Robotica</a></li><li><a href="#dev">Developer</a></li><li><a href="#kd">Distillazione</a></li><li><a href="#pricing">Pricing</a></li></ul>
+        <ul><li><a href="#chi">Chi è per</a></li><li><a href="#roi">ROI</a></li><li><a href="#robotica">Robotica</a></li><li><a href="#dev">Developer</a></li><li><a href="#kd">Distillazione</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul>
       </div>
       <div>
         <h4>Azienda</h4>
@@ -960,6 +1112,39 @@ const HERO=document.querySelector('.hero');
   const T=['FB_Conveyor','IF NOT bSafety','MOVE_J p1, v1000','TON Timer1','OPC UA','MovL p[1] V100','CALL FC_PID','SET DO[5]','WaitTime 500','IEC 61131-3','ST: VAR_INPUT','KRL: PTP HOME','RAPID: MoveL','GRAFCET','PLCopen','TIA Portal','CODESYS V3.5','ROS 2 Humble','EtherCAT','PROFINET','TwinCAT 3','FANUC Karel','palletizing','pick&place','force_feedback','OpenHands','Hermes 4 405B','tool_call','sandbox_run','PR #1247','GPIO.setup(18)','MicroPython','ESP32-S3','STM32F4','LoRA distill','knowledge_distill','master_teacher','student_v+1','MMLU','MT-Bench'];
   function sp(){const t=document.createElement('div');t.className='token';t.textContent=T[Math.floor(Math.random()*T.length)];t.style.left=(Math.random()*100)+'%';t.style.bottom='-30px';const d=14+Math.random()*12;t.style.animationDuration=d+'s';s.appendChild(t);setTimeout(()=>t.remove(),d*1000+200)}
   for(let i=0;i<6;i++)setTimeout(sp,i*1500);setInterval(sp,2000);
+})();
+
+(function(){
+  const eng=document.getElementById('calc-eng');
+  if(!eng)return;
+  const engV=document.getElementById('calc-eng-val');
+  const tiers=document.querySelectorAll('.calc-tiers button');
+  const monthly=document.getElementById('calc-monthly');
+  const equiv=document.getElementById('calc-equiv');
+  const roi=document.getElementById('calc-roi');
+  let perUser=249;
+  function fmt(n){return n.toLocaleString('it-IT')}
+  function update(){
+    const n=parseInt(eng.value);engV.textContent=n;
+    const m=n*perUser;
+    monthly.textContent='€ '+fmt(m);
+    const juniors=(m/2917).toFixed(1).replace('.',',');
+    equiv.textContent='≈ '+juniors+' eng. junior';
+    const annualGain=n*24000;
+    const annualCost=m*12;
+    const roiPct=Math.round((annualGain-annualCost)/annualCost*100);
+    roi.textContent=(roiPct>0?'+':'')+roiPct+'%';
+  }
+  eng.addEventListener('input',update);
+  tiers.forEach(b=>{
+    b.addEventListener('click',()=>{
+      tiers.forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      perUser=parseInt(b.dataset.tier);
+      update();
+    });
+  });
+  update();
 })();
 
 (function(){
