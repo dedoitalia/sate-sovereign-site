@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SATE Sovereign — AI Inference Sovrana EU</title>
-<meta name="description" content="API di inferenza Large Language Model (LLM) ospitata interamente in Italia. Alternativa europea, GDPR-native, AI Act ready alle API americane. Prezzi del 35-60% inferiori." />
-<meta property="og:title" content="SATE Sovereign — AI Inference Sovrana EU" />
-<meta property="og:description" content="LLM API hosted in Italy. GDPR-native. 35-60% cheaper than US hyperscalers." />
+<title>SATE Sovereign — AI per l'automazione industriale</title>
+<meta name="description" content="L'AI che programma le tue macchine. Generi codice PLC, robotica custom e documentazione tecnica in una frazione del tempo. Compatibile con Siemens, B&R, CODESYS, Rockwell, Beckhoff. Ospitata in Italia." />
+<meta property="og:title" content="SATE Sovereign — AI per l'automazione industriale" />
+<meta property="og:description" content="Acceleri di 5× lo sviluppo PLC e robotica. Compatible con Siemens, B&R, CODESYS, Rockwell, Beckhoff. Hosted in Italy." />
 <meta property="og:type" content="website" />
-<link rel="icon" type="image/png" href="https://lirp.cdn-website.com/43b57a5e/dms3rep/multi/opt/Logo+-+nuovo-1920w.png" />
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/43b57a5e/site_favicon_16_1773238209695.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --navy: #0a1f3d; --navy-deep: #051026; --blue: #1e4a8a;
+    --navy: #0a1f3d; --navy-deep: #051026; --blue: #1e4a8a; --blue-soft: #3D6FB8;
     --accent: #af2730; --accent-soft: #c93a44; --gold: #d4a574;
-    --bg: #fafbfc; --bg-card: #ffffff;
+    --bg: #fafbfc; --bg-alt: #f4f6fa; --bg-card: #ffffff;
     --text: #0a1f3d; --text-soft: #4a5568; --text-mute: #718096;
     --border: #e2e8f0; --green: #2f855a;
   }
@@ -24,7 +24,7 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
-  .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
   header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; }
@@ -34,23 +34,16 @@
   .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
   .logo-text strong { font-size: 14px; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
   .logo-text small { font-size: 10px; font-weight: 500; color: var(--text-mute); letter-spacing: 0.1em; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links { display: flex; gap: 30px; align-items: center; }
   .nav-links a:not(.btn) { color: var(--text-soft); font-size: 14px; font-weight: 500; transition: color .15s; }
   .nav-links a:not(.btn):hover { color: var(--navy); }
   .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: all .2s; cursor: pointer; border: none; text-decoration: none; }
   a.btn-primary, .btn-primary { background: var(--accent); color: #ffffff; }
   a.btn-primary:hover, .btn-primary:hover { background: #8e1f27; color: #ffffff; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(175,39,48,0.3); }
-  .btn-ghost { background: transparent; color: var(--text-soft); border: 1px solid var(--border); backdrop-filter: blur(4px); }
+  .btn-ghost { background: transparent; color: var(--text-soft); border: 1px solid var(--border); }
   .btn-ghost:hover { border-color: var(--navy); color: var(--navy); }
 
-  /* ============ HERO with dynamic background ============ */
-  .hero {
-    padding: 110px 0 100px;
-    background: var(--navy);
-    position: relative; overflow: hidden;
-    color: white;
-    isolation: isolate;
-  }
+  .hero { padding: 100px 0 80px; background: var(--navy); position: relative; overflow: hidden; color: white; isolation: isolate; }
   .hero-aurora { position: absolute; inset: -20%; z-index: 0; pointer-events: none; filter: blur(80px); opacity: 0.85; }
   .blob { position: absolute; border-radius: 50%; mix-blend-mode: screen; will-change: transform; }
   .blob-1 { width: 50vw; height: 50vw; background: radial-gradient(circle, #1e4a8a 0%, transparent 65%); top: -10%; left: -10%; animation: blobFloat1 22s ease-in-out infinite; }
@@ -61,80 +54,121 @@
   @keyframes blobFloat2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-12%, -8%) scale(1.1); } }
   @keyframes blobFloat3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(10%, -15%) scale(1.2); } }
   @keyframes blobFloat4 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-8%, 12%) scale(1.05); } }
-
   #neural-canvas { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
-
-  .hero-grid {
-    position: absolute; inset: 0; z-index: 1; pointer-events: none;
-    background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-    background-size: 56px 56px;
-    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-    animation: gridDrift 60s linear infinite;
-  }
+  .hero-grid { position: absolute; inset: 0; z-index: 1; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%); animation: gridDrift 60s linear infinite; }
   @keyframes gridDrift { 0% { background-position: 0 0; } 100% { background-position: 56px 56px; } }
-
   .token-stream { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
-  .token {
-    position: absolute; font-family: 'JetBrains Mono', monospace; font-size: 11px;
-    color: rgba(212,165,116,0.55); background: rgba(10,31,61,0.4);
-    border: 1px solid rgba(212,165,116,0.25);
-    padding: 3px 9px; border-radius: 999px; white-space: nowrap;
-    backdrop-filter: blur(4px);
-    animation: tokenFloat linear infinite; will-change: transform, opacity;
-  }
-  @keyframes tokenFloat {
-    0% { transform: translateY(20px); opacity: 0; }
-    10% { opacity: 1; } 90% { opacity: 1; }
-    100% { transform: translateY(-100vh); opacity: 0; }
-  }
-
-  .hero-inner { position: relative; z-index: 3; max-width: 880px; }
-
-  .badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 6px 14px; border-radius: 999px;
-    background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.95);
-    font-size: 13px; font-weight: 600; margin-bottom: 28px;
-    border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(8px);
-  }
+  .token { position: absolute; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(212,165,116,0.6); background: rgba(10,31,61,0.45); border: 1px solid rgba(212,165,116,0.25); padding: 3px 9px; border-radius: 999px; white-space: nowrap; backdrop-filter: blur(4px); animation: tokenFloat linear infinite; will-change: transform, opacity; }
+  @keyframes tokenFloat { 0% { transform: translateY(20px); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-100vh); opacity: 0; } }
+  .hero-inner { position: relative; z-index: 3; max-width: 920px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.95); font-size: 13px; font-weight: 600; margin-bottom: 28px; border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(8px); }
   .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; box-shadow: 0 0 0 0 var(--green); }
   @keyframes pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(47,133,90,0.7); } 50% { opacity: 0.4; box-shadow: 0 0 0 8px rgba(47,133,90,0); } }
-
-  h1 { font-size: clamp(38px, 5.8vw, 68px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.04; margin-bottom: 24px; color: white; }
+  h1 { font-size: clamp(38px, 5.6vw, 66px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 24px; color: white; }
   h1 .highlight { background: linear-gradient(120deg, #ffffff 0%, #d4a574 50%, #af2730 100%); -webkit-background-clip: text; background-clip: text; color: transparent; background-size: 200% auto; animation: shimmer 8s ease-in-out infinite; }
   @keyframes shimmer { 0%,100% { background-position: 0% center; } 50% { background-position: 100% center; } }
-  .hero p.lead { font-size: clamp(17px, 1.5vw, 20px); color: rgba(255,255,255,0.85); max-width: 680px; margin-bottom: 36px; }
+  .hero p.lead { font-size: clamp(17px, 1.5vw, 21px); color: rgba(255,255,255,0.85); max-width: 760px; margin-bottom: 36px; }
   .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
   .btn-lg { padding: 14px 24px; font-size: 15px; }
   a.btn-primary.btn-lg, .btn-primary.btn-lg { box-shadow: 0 8px 24px rgba(175,39,48,0.35); }
-  .hero .btn-ghost { color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.05); }
+  .hero .btn-ghost { color: rgba(255,255,255,0.92); border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.05); backdrop-filter: blur(4px); }
   .hero .btn-ghost:hover { color: white; border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.1); }
-
-  .hero-meta { margin-top: 56px; display: flex; gap: 40px; flex-wrap: wrap; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.12); }
+  .hero-meta { margin-top: 56px; display: flex; gap: 50px; flex-wrap: wrap; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.12); }
   .meta-item .num { font-size: 32px; font-weight: 800; color: white; letter-spacing: -0.02em; font-family: 'JetBrains Mono', monospace; }
+  .meta-item .num span { color: var(--gold); }
   .meta-item .lbl { font-size: 13px; color: rgba(255,255,255,0.65); margin-top: 2px; }
 
-  section { padding: 88px 0; }
+  .compat { background: white; border-bottom: 1px solid var(--border); padding: 50px 0; }
+  .compat-label { text-align: center; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-mute); margin-bottom: 28px; }
+  .compat-grid { display: flex; flex-wrap: wrap; gap: 14px 18px; align-items: center; justify-content: center; max-width: 1100px; margin: 0 auto; }
+  .brand { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.01em; padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); color: var(--text-soft); font-size: 14px; transition: all .2s; background: var(--bg); cursor: default; }
+  .brand:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(10,31,61,0.08); }
+  .brand-cat { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mute); padding: 8px 8px; border-right: 1px solid var(--border); margin-right: 4px; }
+  .brand:hover.bsiemens { color: #009999; border-color: #009999; }
+  .brand:hover.bbr { color: #FF6900; border-color: #FF6900; }
+  .brand:hover.bcodesys { color: #E10000; border-color: #E10000; }
+  .brand:hover.brockwell { color: #CC0000; border-color: #CC0000; }
+  .brand:hover.bbeckhoff { color: #C8102E; border-color: #C8102E; }
+  .brand:hover.bschneider { color: #3DCD58; border-color: #3DCD58; }
+  .brand:hover.bmitsu { color: #E60012; border-color: #E60012; }
+  .brand:hover.bomron { color: #006FBA; border-color: #006FBA; }
+  .brand:hover.bbosch { color: #EA0016; border-color: #EA0016; }
+  .brand:hover.babb { color: #FF000F; border-color: #FF000F; }
+  .brand:hover.bkuka { color: #FF7700; border-color: #FF7700; }
+  .brand:hover.bfanuc { color: #F8B800; border-color: #F8B800; }
+  .brand:hover.byaskawa { color: #003C71; border-color: #003C71; }
+  .brand:hover.bur { color: #00A4DC; border-color: #00A4DC; }
+  .brand:hover.bstaubli { color: #003D7A; border-color: #003D7A; }
+
+  section { padding: 96px 0; }
   .section-tag { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 14px; }
-  h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px; }
-  .section-head { max-width: 720px; margin-bottom: 56px; }
-  .section-head p { color: var(--text-soft); font-size: 17px; }
+  h2 { font-size: clamp(30px, 3.6vw, 44px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px; }
+  .section-head { max-width: 760px; margin-bottom: 56px; }
+  .section-head p { color: var(--text-soft); font-size: 18px; }
+  .section-head.center { text-align: center; margin-left: auto; margin-right: auto; }
 
-  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  @media (max-width: 860px) { .why-grid { grid-template-columns: 1fr; } }
-  .why-card { background: var(--bg-card); padding: 32px; border: 1px solid var(--border); border-radius: 14px; transition: all .25s; position: relative; overflow: hidden; }
-  .why-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 0; background: linear-gradient(180deg, var(--accent), transparent); opacity: 0; transition: all .3s; }
-  .why-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(10,31,61,0.1); }
-  .why-card:hover::before { height: 100%; opacity: 0.04; }
-  .why-icon { width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(135deg, var(--navy), var(--blue)); color: white; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; position: relative; }
-  .why-card:nth-child(2) .why-icon { background: linear-gradient(135deg, var(--accent), #8e1f27); font-size: 22px; }
-  .why-card:nth-child(3) .why-icon { background: linear-gradient(135deg, var(--gold), #b8895e); font-size: 12px; }
-  .why-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.01em; }
-  .why-card p { color: var(--text-soft); font-size: 15px; }
+  .personas { background: var(--bg); }
+  .personas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 900px) { .personas-grid { grid-template-columns: 1fr; } }
+  .persona-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 36px 32px; transition: all .25s; position: relative; overflow: hidden; }
+  .persona-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent); opacity: 0; transition: opacity .2s; }
+  .persona-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(10,31,61,0.1); border-color: var(--accent); }
+  .persona-card:hover::before { opacity: 1; }
+  .persona-icon { width: 52px; height: 52px; border-radius: 12px; background: linear-gradient(135deg, var(--navy), var(--blue)); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; letter-spacing: 0.05em; margin-bottom: 22px; }
+  .persona-card:nth-child(2) .persona-icon { background: linear-gradient(135deg, var(--accent), #8e1f27); }
+  .persona-card:nth-child(3) .persona-icon { background: linear-gradient(135deg, var(--gold), #b8895e); color: var(--navy); }
+  .persona-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.01em; }
+  .persona-card .role { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
+  .persona-card p { color: var(--text-soft); font-size: 15px; margin-bottom: 18px; }
+  .persona-card ul { list-style: none; padding: 0; }
+  .persona-card li { font-size: 14px; color: var(--text-soft); padding: 6px 0 6px 24px; position: relative; }
+  .persona-card li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: 800; }
 
-  .models-section { background: white; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .roi { background: white; }
+  .roi-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 64px; }
+  @media (max-width: 900px) { .roi-stats { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .roi-stats { grid-template-columns: 1fr; } }
+  .stat-card { background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%); border-radius: 16px; padding: 32px 28px; color: white; position: relative; overflow: hidden; }
+  .stat-card:nth-child(2) { background: linear-gradient(135deg, var(--accent) 0%, #8e1f27 100%); }
+  .stat-card:nth-child(4) { background: linear-gradient(135deg, var(--gold) 0%, #b8895e 100%); color: var(--navy); }
+  .stat-card .num { font-size: 56px; font-weight: 800; line-height: 1; letter-spacing: -0.03em; font-family: 'JetBrains Mono', monospace; margin-bottom: 14px; }
+  .stat-card .lbl { font-size: 14px; opacity: 0.9; line-height: 1.4; }
+  .stat-card::after { content: ""; position: absolute; bottom: -30px; right: -30px; width: 120px; height: 120px; background: rgba(255,255,255,0.1); border-radius: 50%; }
+
+  .compare-wrap { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .compare-table { width: 100%; border-collapse: collapse; }
+  .compare-table th { background: var(--navy); color: white; text-align: left; padding: 18px 22px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; }
+  .compare-table th.with { color: var(--gold); }
+  .compare-table td { padding: 18px 22px; border-bottom: 1px solid var(--border); font-size: 15px; vertical-align: middle; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table .task { font-weight: 600; color: var(--navy); }
+  .compare-table .before { color: var(--text-mute); text-decoration: line-through; font-family: 'JetBrains Mono', monospace; font-size: 14px; }
+  .compare-table .after { color: var(--green); font-weight: 700; font-family: 'JetBrains Mono', monospace; font-size: 14px; }
+  .compare-table .gain { color: var(--accent); font-weight: 800; font-family: 'JetBrains Mono', monospace; }
+  .compare-table tr:hover td { background: rgba(175,39,48,0.03); }
+
+  .robotics { background: var(--navy); color: white; padding: 100px 0; position: relative; overflow: hidden; }
+  .robotics::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(212,165,116,0.18) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(175,39,48,0.15) 0%, transparent 45%); }
+  .robotics-inner { position: relative; }
+  .robotics h2 { color: white; }
+  .robotics .lead { color: rgba(255,255,255,0.85); font-size: 18px; max-width: 760px; margin-bottom: 48px; }
+  .robotics-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: center; }
+  @media (max-width: 900px) { .robotics-grid { grid-template-columns: 1fr; } }
+  .robotics-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .feat { padding: 22px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; transition: all .2s; }
+  .feat:hover { background: rgba(255,255,255,0.08); border-color: var(--gold); }
+  .feat-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; color: var(--gold); text-transform: uppercase; margin-bottom: 8px; }
+  .feat h4 { font-size: 17px; font-weight: 700; margin-bottom: 6px; color: white; }
+  .feat p { font-size: 13px; color: rgba(255,255,255,0.7); }
+  .robotics-pillars { display: flex; flex-direction: column; gap: 16px; }
+  .pillar { padding: 24px; background: rgba(255,255,255,0.03); border-left: 3px solid var(--gold); border-radius: 4px; }
+  .pillar .num { font-size: 28px; font-weight: 800; color: var(--gold); font-family: 'JetBrains Mono', monospace; line-height: 1; margin-bottom: 8px; }
+  .pillar h4 { font-size: 15px; font-weight: 700; color: white; margin-bottom: 4px; }
+  .pillar p { font-size: 13px; color: rgba(255,255,255,0.7); }
+
+  .models-section { background: white; padding: 88px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .models-table { width: 100%; border-collapse: collapse; background: white; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
-  .models-table th { background: var(--navy); color: white; text-align: left; padding: 16px 20px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; }
+  .models-table th { background: var(--navy); color: white; text-align: left; padding: 16px 20px; font-size: 13px; font-weight: 600; }
   .models-table td { padding: 18px 20px; border-bottom: 1px solid var(--border); font-size: 15px; }
   .models-table tr:last-child td { border-bottom: none; }
   .models-table tr:nth-child(even) td { background: #fafbfc; }
@@ -167,17 +201,17 @@
   .price-list li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
   .price-card.featured .price-list li::before { color: var(--gold); }
 
-  .compliance { background: var(--navy); color: white; padding: 80px 0; position: relative; overflow: hidden; }
+  .compliance { background: var(--navy); color: white; padding: 88px 0; position: relative; overflow: hidden; }
   .compliance::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 80% 30%, rgba(175,39,48,0.18) 0%, transparent 50%); }
   .compliance-inner { position: relative; }
   .compliance h2 { color: white; }
-  .compliance .lead { color: rgba(255,255,255,0.8); }
-  .badges-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
+  .compliance .lead { color: rgba(255,255,255,0.8); font-size: 18px; max-width: 760px; }
+  .badges-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
   .comp-badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 12px 20px; border-radius: 10px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 10px; backdrop-filter: blur(8px); }
   .comp-badge::before { content: "✓"; color: var(--gold); font-weight: 800; }
 
   .cta-section { padding: 100px 0; background: linear-gradient(135deg, var(--bg) 0%, white 100%); text-align: center; border-top: 1px solid var(--border); }
-  .cta-card { max-width: 720px; margin: 0 auto; background: white; border: 1px solid var(--border); border-radius: 20px; padding: 56px 48px; box-shadow: 0 20px 60px rgba(10,31,61,0.08); }
+  .cta-card { max-width: 760px; margin: 0 auto; background: white; border: 1px solid var(--border); border-radius: 24px; padding: 60px 48px; box-shadow: 0 24px 60px rgba(10,31,61,0.08); }
   .cta-card h2 { margin-bottom: 16px; }
   .cta-card p { color: var(--text-soft); margin-bottom: 32px; font-size: 17px; }
   .cta-form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
@@ -210,100 +244,235 @@
     <a href="#" class="logo">
       <img src="https://lirp.cdn-website.com/43b57a5e/dms3rep/multi/opt/Logo+-+nuovo-1920w.png" alt="SATE" class="logo-img" />
       <div class="logo-divider"></div>
-      <div class="logo-text">
-        <strong>Sovereign</strong>
-        <small>AI Inference EU</small>
-      </div>
+      <div class="logo-text"><strong>Sovereign</strong><small>AI per l'industria</small></div>
     </a>
     <nav class="nav-links">
-      <a href="#perche">Perché Sovereign</a>
-      <a href="#modelli">Modelli</a>
+      <a href="#chi">Chi è per</a>
+      <a href="#roi">ROI</a>
+      <a href="#robotica">Robotica</a>
       <a href="#pricing">Pricing</a>
-      <a href="#compliance">Compliance</a>
-      <a href="#contatti" class="btn btn-primary">Richiedi accesso beta</a>
+      <a href="#contatti" class="btn btn-primary">Richiedi demo</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
   <div class="hero-aurora">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="blob blob-4"></div>
+    <div class="blob blob-1"></div><div class="blob blob-2"></div>
+    <div class="blob blob-3"></div><div class="blob blob-4"></div>
   </div>
   <div class="hero-grid"></div>
   <canvas id="neural-canvas"></canvas>
   <div class="token-stream" id="token-stream"></div>
-
   <div class="container hero-inner">
-    <div class="badge">
-      <span class="badge-dot"></span>
-      Hosted in Italy · Beta Q3 2026
-    </div>
-    <h1>
-      AI sovrana, <span class="highlight">made in Italy</span>.<br />
-      Inferenza LLM senza compromessi.
-    </h1>
+    <div class="badge"><span class="badge-dot"></span>Beta Q3 2026 · Hosted in Italy · GDPR-native</div>
+    <h1>L'AI che <span class="highlight">programma le tue macchine</span>.</h1>
     <p class="lead">
-      API di inferenza Large Language Model di frontiera, eseguite interamente su hardware di proprietà SATE in Toscana.
-      GDPR-native, AI Act ready, prezzi del 35-60% inferiori agli hyperscaler statunitensi. Compatibile con lo standard OpenAI.
+      Acceleri di 5× lo sviluppo di codice PLC, robotica custom e automazione industriale.
+      Compatibile con Siemens, B&amp;R, CODESYS, Rockwell, Beckhoff e oltre 15 ecosistemi.
+      Ospitata interamente in Italia: il tuo IP industriale resta in azienda.
     </p>
     <div class="hero-cta">
-      <a href="#contatti" class="btn btn-primary btn-lg">Richiedi accesso beta →</a>
-      <a href="#pricing" class="btn btn-ghost btn-lg">Vedi pricing</a>
+      <a href="#contatti" class="btn btn-primary btn-lg">Richiedi demo per il tuo team →</a>
+      <a href="#roi" class="btn btn-ghost btn-lg">Vedi i risparmi</a>
     </div>
     <div class="hero-meta">
-      <div class="meta-item"><div class="num">256 GB</div><div class="lbl">VRAM unificata cluster</div></div>
-      <div class="meta-item"><div class="num">671B</div><div class="lbl">Modelli supportati (max)</div></div>
-      <div class="meta-item"><div class="num">100%</div><div class="lbl">Esecuzione in UE</div></div>
-      <div class="meta-item"><div class="num">~50%</div><div class="lbl">Risparmio vs USA</div></div>
+      <div class="meta-item"><div class="num"><span>5×</span> più veloce</div><div class="lbl">Sviluppo codice PLC e robotica</div></div>
+      <div class="meta-item"><div class="num"><span>−60%</span></div><div class="lbl">Ore di debugging</div></div>
+      <div class="meta-item"><div class="num"><span>−40%</span></div><div class="lbl">Time-to-market</div></div>
+      <div class="meta-item"><div class="num">100% UE</div><div class="lbl">Esecuzione sovrana</div></div>
     </div>
   </div>
 </section>
 
-<section id="perche">
+<section class="compat">
+  <div class="container">
+    <div class="compat-label">Compatibile con i principali ecosistemi industriali</div>
+    <div class="compat-grid">
+      <span class="brand-cat">PLC</span>
+      <span class="brand bsiemens">SIEMENS</span>
+      <span class="brand bbr">B&amp;R Automation</span>
+      <span class="brand bcodesys">CODESYS</span>
+      <span class="brand brockwell">Rockwell Automation</span>
+      <span class="brand bbeckhoff">Beckhoff</span>
+      <span class="brand bschneider">Schneider Electric</span>
+      <span class="brand bmitsu">Mitsubishi Electric</span>
+      <span class="brand bomron">OMRON</span>
+      <span class="brand bbosch">Bosch Rexroth</span>
+      <span class="brand-cat">Robotica</span>
+      <span class="brand babb">ABB</span>
+      <span class="brand bkuka">KUKA</span>
+      <span class="brand bfanuc">FANUC</span>
+      <span class="brand byaskawa">Yaskawa</span>
+      <span class="brand bur">Universal Robots</span>
+      <span class="brand bstaubli">Stäubli</span>
+    </div>
+  </div>
+</section>
+
+<section id="chi" class="personas">
   <div class="container">
     <div class="section-head">
-      <div class="section-tag">Perché Sovereign</div>
-      <h2>Tre ragioni per cui le aziende europee scelgono SATE Sovereign</h2>
-      <p>Non un altro wrapper su API americane. Un cluster fisico in Toscana, sotto giurisdizione esclusiva italiana ed europea.</p>
+      <div class="section-tag">Chi è per</div>
+      <h2>Pensata per chi progetta e automatizza l'industria.</h2>
+      <p>Non un assistente generalista. Un'AI specializzata che capisce ladder, structured text, GRAFCET, RAPID, KRL, ROS, OPC UA. E che lavora in casa tua, sul tuo IP.</p>
     </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">EU</div>
-        <h3>Sovranità del dato verificabile</h3>
-        <p>I tuoi prompt non lasciano mai il territorio europeo. Niente CLOUD Act, niente trasferimenti extra-SEE, niente clausole grigie. Sede del trattamento: Serravalle Pistoiese (PT), Italia.</p>
+    <div class="personas-grid">
+      <div class="persona-card">
+        <div class="persona-icon">PLC</div>
+        <div class="role">Software automation engineer</div>
+        <h3>Scrivi codice PLC al doppio della velocità.</h3>
+        <p>Generazione di Function Block in ladder e Structured Text, refactoring di codice legacy, debugging guidato sui log macchina.</p>
+        <ul>
+          <li>Generazione FB Siemens TIA, B&amp;R Automation Studio, CODESYS</li>
+          <li>Conversione legacy STEP 7 / S5 → TIA</li>
+          <li>Test case automatici per HMI e SCADA</li>
+          <li>Documentazione delle funzioni in IEC 61131-3</li>
+        </ul>
       </div>
-      <div class="why-card">
-        <div class="why-icon">€</div>
-        <h3>Prezzi aggressivi, qualità di frontiera</h3>
-        <p>Modelli open-weight di classe Llama, Qwen, DeepSeek, Mistral. Stessa qualità benchmarkata dei top USA, prezzo del 35-60% inferiore per token equivalente.</p>
+      <div class="persona-card">
+        <div class="persona-icon">RBT</div>
+        <div class="role">Sistemista robotica</div>
+        <h3>Robotica custom, integrazione accelerata.</h3>
+        <p>Dallo studio di fattibilità al codice di traiettoria. Pick&amp;place, palletizzazione, integrazione visione e force sensing.</p>
+        <ul>
+          <li>Generazione percorsi RAPID (ABB), KRL (KUKA), Karel (FANUC)</li>
+          <li>Setup ROS 2 e simulazione Gazebo / Isaac Sim</li>
+          <li>Tuning PID, motion planning, traiettorie cartesiane</li>
+          <li>Integrazione visione artificiale Cognex / Keyence / Halcon</li>
+        </ul>
       </div>
-      <div class="why-card">
-        <div class="why-icon">API</div>
-        <h3>Drop-in OpenAI compatibile</h3>
-        <p>Endpoint <code class="inline">/v1/chat/completions</code> e <code class="inline">/v1/embeddings</code>. Cambia <code class="inline">base_url</code> e API key, e il tuo codice esistente continua a funzionare. Zero migrazione.</p>
+      <div class="persona-card">
+        <div class="persona-icon">CTO</div>
+        <div class="role">Direzione tecnica / R&amp;D</div>
+        <h3>Più progetti consegnati, stesso team.</h3>
+        <p>Un moltiplicatore di produttività: i tuoi senior si concentrano su architettura e cliente, non su scrittura di codice ripetitivo.</p>
+        <ul>
+          <li>Knowledge management su archivio storico interventi</li>
+          <li>Predictive maintenance da log macchina</li>
+          <li>Documentazione tecnica multilingua IT/EN/DE/FR/ES</li>
+          <li>Stima costi/tempi automatica da specifica cliente</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="modelli" class="models-section">
+<section id="roi" class="roi">
   <div class="container">
     <div class="section-head">
-      <div class="section-tag">Catalogo modelli</div>
-      <h2>Modelli LLM open-weight di frontiera</h2>
-      <p>Selezione curata di modelli con licenza compatibile con uso commerciale. Quantizzazione Q4_K_M ottimizzata per banda di memoria del cluster.</p>
+      <div class="section-tag">Risparmi concreti</div>
+      <h2>Numeri che cambiano il P&amp;L.</h2>
+      <p>Non una promessa di "AI rivoluziona tutto". Numeri misurati su task reali del flusso di lavoro di un team di automazione industriale.</p>
+    </div>
+    <div class="roi-stats">
+      <div class="stat-card">
+        <div class="num">5×</div>
+        <div class="lbl">Più veloce nella scrittura di blocchi funzione PLC complessi</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">−60%</div>
+        <div class="lbl">Riduzione delle ore di debugging su codice legacy</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">10×</div>
+        <div class="lbl">Output di documentazione tecnica multilingua</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">€35k</div>
+        <div class="lbl">Risparmio annuo equivalente per ingegnere junior automatizzato</div>
+      </div>
+    </div>
+
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Task tipico di un automation engineer</th>
+            <th>Senza AI</th>
+            <th class="with">Con SATE Sovereign</th>
+            <th>Risparmio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="task">Refactoring FB legacy in TIA Portal (200 righe ladder)</td><td><span class="before">2 settimane</span></td><td><span class="after">2 giorni</span></td><td><span class="gain">−80%</span></td></tr>
+          <tr><td class="task">Generazione test case HMI per macchina nuova</td><td><span class="before">3 giorni</span></td><td><span class="after">2 ore</span></td><td><span class="gain">−92%</span></td></tr>
+          <tr><td class="task">Documentazione macchina multilingua IT/EN/DE</td><td><span class="before">1 settimana</span></td><td><span class="after">1 ora</span></td><td><span class="gain">−98%</span></td></tr>
+          <tr><td class="task">Studio di fattibilità su RFQ di automazione</td><td><span class="before">5 giorni</span></td><td><span class="after">1 giorno</span></td><td><span class="gain">−80%</span></td></tr>
+          <tr><td class="task">Path planning 6-axis per pick&amp;place custom</td><td><span class="before">3 giorni</span></td><td><span class="after">4 ore</span></td><td><span class="gain">−83%</span></td></tr>
+          <tr><td class="task">Refactoring legacy STEP 7 / S5 → TIA Portal</td><td><span class="before">4 settimane</span></td><td><span class="after">5 giorni</span></td><td><span class="gain">−75%</span></td></tr>
+          <tr><td class="task">Analisi log per root cause su guasto intermittente</td><td><span class="before">2 giorni</span></td><td><span class="after">1 ora</span></td><td><span class="gain">−94%</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="robotica" class="robotics">
+  <div class="container robotics-inner">
+    <div class="section-head">
+      <div class="section-tag" style="color: var(--gold)">Robotica custom</div>
+      <h2>Dalla specifica alla cella robotica integrata.</h2>
+      <p class="lead">Non vendiamo una libreria di codice, ma un compagno di sviluppo che capisce ABB, KUKA, FANUC, Yaskawa, ROS 2 e i linguaggi proprietari di ciascun controller. Adatto sia a manifatture che ai system integrator.</p>
+    </div>
+    <div class="robotics-grid">
+      <div class="robotics-features">
+        <div class="feat">
+          <div class="feat-tag">Path planning</div>
+          <h4>Traiettorie ottimizzate in minuti</h4>
+          <p>Generazione di percorsi cartesiani e joint-space su 6/7 assi con vincoli di carico e collisione.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-tag">Visione + Force</div>
+          <h4>Integrazione sensoristica end-to-end</h4>
+          <p>Cognex, Keyence, Halcon, ATI Force/Torque. Pipeline di calibrazione automatiche.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-tag">Cell design</div>
+          <h4>Layout ottimizzato per ciclo</h4>
+          <p>Stima takt time, posizionamento robot, sicurezza ISO/TS 15066, sequenze operative.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-tag">Sim → Real</div>
+          <h4>Simulazione + commissioning virtuale</h4>
+          <p>Setup rapido di Gazebo / Isaac Sim / RobotStudio / RoboGuide. Trasferimento sim-to-real.</p>
+        </div>
+      </div>
+      <div class="robotics-pillars">
+        <div class="pillar">
+          <div class="num">−45%</div>
+          <h4>Tempo di sviluppo cella</h4>
+          <p>Dalla specifica al collaudo finale</p>
+        </div>
+        <div class="pillar">
+          <div class="num">8</div>
+          <h4>Marche supportate</h4>
+          <p>ABB, KUKA, FANUC, Yaskawa, UR, Stäubli, Comau, Mitsubishi</p>
+        </div>
+        <div class="pillar">
+          <div class="num">∞</div>
+          <h4>Reuse di IP interno</h4>
+          <p>L'AI impara dalle tue librerie, non viceversa</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="models-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Modelli LLM</div>
+      <h2>Frontiera open-weight, ottimizzata per il codice industriale.</h2>
+      <p>Selezione curata di modelli con licenza commerciale e fine-tuning interno SATE su corpus di automazione.</p>
     </div>
     <table class="models-table">
       <thead><tr><th>Modello</th><th>Parametri</th><th>Throughput</th><th>Caso d'uso ottimale</th></tr></thead>
       <tbody>
-        <tr><td class="model-name">Llama 70B<code>sovereign-light-70b</code></td><td><span class="pill">70B</span></td><td>~45 t/s</td><td>Chat conversazionale, classificazione, generazione testi</td></tr>
-        <tr><td class="model-name">Llama / Mistral 120B<code>sovereign-pro-120b</code></td><td><span class="pill">120B</span></td><td>~30 t/s</td><td>Agenti real-time, analisi documentale, code generation</td></tr>
-        <tr><td class="model-name">Mistral Large v3<code>sovereign-rag-123b</code></td><td><span class="pill">123B</span></td><td>~32 t/s</td><td>RAG multilingua EU, sintesi documenti legali, compliance</td></tr>
-        <tr><td class="model-name">DeepSeek V3 (MoE)<code>sovereign-max-moe</code></td><td><span class="pill">671B</span></td><td>~18 t/s</td><td>Analisi strategica complessa, ragionamento multi-step</td></tr>
-        <tr><td class="model-name">Qwen 400B<code>sovereign-frontier-400b</code></td><td><span class="pill">400B</span></td><td>~7 t/s</td><td>Coding ad altissima complessità, ricerca scientifica</td></tr>
+        <tr><td class="model-name">Sovereign Light<code>llama-3-70b · ladder, ST, lib gen</code></td><td><span class="pill">70B</span></td><td>~45 t/s</td><td>Code completion PLC, classificazione log, generazione testi tecnici</td></tr>
+        <tr><td class="model-name">Sovereign Pro<code>mixtral-style 120B · agenti automation</code></td><td><span class="pill">120B</span></td><td>~30 t/s</td><td>Refactoring complesso, debugging multi-step, code review architetturale</td></tr>
+        <tr><td class="model-name">Sovereign RAG<code>mistral-large 123B · doc industriale</code></td><td><span class="pill">123B</span></td><td>~32 t/s</td><td>RAG su manuali Siemens/B&amp;R/Rockwell, sintesi documentale multilingua</td></tr>
+        <tr><td class="model-name">Sovereign Max<code>deepseek-v3 671B MoE</code></td><td><span class="pill">671B</span></td><td>~18 t/s</td><td>Studio fattibilità, architettura sistemi complessi, decisioni di progetto</td></tr>
       </tbody>
     </table>
   </div>
@@ -311,62 +480,84 @@
 
 <section id="pricing" class="pricing-section">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head center">
       <div class="section-tag">Pricing</div>
-      <h2>Pay-per-token o capacity reservation. Senza minimi.</h2>
-      <p>Prezzi in euro, fatturazione italiana, no vendor lock-in. Confronto con listini pubblici hyperscaler USA al 29 aprile 2026.</p>
+      <h2>Per ingegnere o per cluster dedicato.</h2>
+      <p>Un costo prevedibile, in euro, fatturato in Italia. Il break-even arriva spesso al primo progetto.</p>
     </div>
     <div class="price-grid">
       <div class="price-card">
-        <div class="price-tier">Tier 1</div>
+        <div class="price-tier">Per engineer</div>
         <div class="price-name">Light</div>
-        <div class="price-meta">Modelli 70B</div>
-        <div class="price-amount">€ 0,30<small>/M token input</small></div>
+        <div class="price-meta">Modelli 70B · uso quotidiano</div>
+        <div class="price-amount">€ 99<small>/mese per utente</small></div>
         <div class="price-divider"></div>
-        <ul class="price-list"><li>€ 0,90/M token output</li><li>Compatibile OpenAI API</li><li>Rate limit: 60 req/min</li><li>~60% del prezzo GPT-4o mini</li></ul>
+        <ul class="price-list">
+          <li>Code completion PLC e robotica</li>
+          <li>Documentazione automatica</li>
+          <li>API OpenAI-compatibile</li>
+          <li>Rate limit: 60 req/min</li>
+        </ul>
       </div>
       <div class="price-card featured">
-        <div class="price-tier">Tier 2 · più scelto</div>
+        <div class="price-tier">Più scelto</div>
         <div class="price-name">Pro</div>
-        <div class="price-meta">Modelli 120B</div>
-        <div class="price-amount">€ 0,80<small>/M token input</small></div>
+        <div class="price-meta">Modelli 120B · team</div>
+        <div class="price-amount">€ 249<small>/mese per utente</small></div>
         <div class="price-divider"></div>
-        <ul class="price-list"><li>€ 2,40/M token output</li><li>Streaming + tool calling</li><li>Rate limit: 120 req/min</li><li>~50% del prezzo Claude Sonnet</li></ul>
+        <ul class="price-list">
+          <li>Refactoring legacy + agenti</li>
+          <li>RAG su manuali e archivio storico</li>
+          <li>Streaming + tool calling</li>
+          <li>Rate limit: 120 req/min</li>
+        </ul>
       </div>
       <div class="price-card">
-        <div class="price-tier">Tier 3</div>
+        <div class="price-tier">Power</div>
         <div class="price-name">Max</div>
-        <div class="price-meta">DeepSeek 671B / Qwen 400B</div>
-        <div class="price-amount">€ 1,50<small>/M token input</small></div>
+        <div class="price-meta">Modelli 400B+ frontier</div>
+        <div class="price-amount">€ 590<small>/mese per utente</small></div>
         <div class="price-divider"></div>
-        <ul class="price-list"><li>€ 4,50/M token output</li><li>Context 128k token</li><li>Rate limit: 30 req/min</li><li>~35% del prezzo GPT-4o</li></ul>
+        <ul class="price-list">
+          <li>Studi di fattibilità complessi</li>
+          <li>Architettura di sistema</li>
+          <li>Context 128k token</li>
+          <li>Priority queue</li>
+        </ul>
       </div>
       <div class="price-card">
         <div class="price-tier">Enterprise</div>
-        <div class="price-name">Dedicated</div>
-        <div class="price-meta">Tenant isolato + SLA</div>
-        <div class="price-amount">da € 1.200<small>/mese</small></div>
+        <div class="price-name">Cluster dedicato</div>
+        <div class="price-meta">On-prem o tenant isolato</div>
+        <div class="price-amount">da € 2.400<small>/mese</small></div>
         <div class="price-divider"></div>
-        <ul class="price-list"><li>Capacity reservation</li><li>SLA 99,5% contrattuale</li><li>Supporto dedicato IT</li><li>DPA personalizzato</li></ul>
+        <ul class="price-list">
+          <li>Capacity reservation 100%</li>
+          <li>Fine-tuning su IP cliente</li>
+          <li>SLA 99,5% contrattuale</li>
+          <li>DPA personalizzato</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="compliance" class="compliance">
+<section class="compliance">
   <div class="container compliance-inner">
     <div class="section-head">
-      <div class="section-tag" style="color: var(--gold)">Compliance</div>
-      <h2>Pensata per l'AI Act, costruita per il GDPR</h2>
-      <p class="lead">Per le entità essenziali NIS2, le PA, gli studi professionali e le manifatture con IP sensibile, la compliance non è un nice-to-have. È il primo requisito.</p>
+      <div class="section-tag" style="color: var(--gold)">Sovranità del dato</div>
+      <h2>Il tuo IP industriale non lascia l'azienda.</h2>
+      <p class="lead">Gli engineer americani avranno anche modelli più grandi. Ma se mandi loro la tua libreria di codice PLC sviluppata in 30 anni, la regali. SATE Sovereign è la risposta italiana per chi non può permettersi di esportare il proprio know-how.</p>
     </div>
     <div class="badges-row">
       <div class="comp-badge">GDPR-native (Reg. 2016/679)</div>
       <div class="comp-badge">AI Act EU (Reg. 2024/1689)</div>
       <div class="comp-badge">NIS2 ready</div>
       <div class="comp-badge">No data retention</div>
+      <div class="comp-badge">No training su prompt cliente</div>
       <div class="comp-badge">DPA standard incluso</div>
       <div class="comp-badge">ISO 27001 (Q1 2027)</div>
+      <div class="comp-badge">On-prem opzionale</div>
     </div>
   </div>
 </section>
@@ -374,11 +565,11 @@
 <section id="contatti" class="cta-section">
   <div class="container">
     <div class="cta-card">
-      <h2>Richiedi accesso alla beta</h2>
-      <p>Stiamo selezionando 10 partner industriali per la beta privata di SATE Sovereign. Crediti API gratuiti per tre mesi e sconto 50% sui primi sei mesi di abbonamento.</p>
-      <form class="cta-form" onsubmit="event.preventDefault(); alert('Grazie! Ti contatteremo entro 48 ore all\'indirizzo: ' + this.elements.email.value);">
-        <input type="email" name="email" placeholder="indirizzo@azienda.it" required />
-        <button type="submit" class="btn btn-primary btn-lg">Richiedi invito →</button>
+      <h2>Vediamolo sul tuo codice.</h2>
+      <p>Demo guidata di 30 minuti su un caso reale del tuo team. Ti mostriamo l'AI che genera Function Block o codice robotica direttamente sul tuo stack di automazione, senza che il codice esca dalla tua macchina.</p>
+      <form class="cta-form" onsubmit="event.preventDefault(); alert('Grazie! Ti contatteremo entro 48 ore al: ' + this.elements.email.value);">
+        <input type="email" name="email" placeholder="email@azienda.it" required />
+        <button type="submit" class="btn btn-primary btn-lg">Prenota demo →</button>
       </form>
       <p style="font-size: 13px; color: var(--text-mute); margin-top: 22px; margin-bottom: 0;">
         Oppure scrivi a <a href="mailto:sovereign@sate.eu" style="color: var(--accent); font-weight: 600;">sovereign@sate.eu</a>
@@ -392,12 +583,12 @@
     <div class="footer-grid">
       <div>
         <img src="https://lirp.cdn-website.com/43b57a5e/dms3rep/multi/opt/Logo+-+nuovo-1920w.png" alt="SATE" class="footer-logo-img" />
-        <p class="footer-tag">Inferenza AI sovrana, ospitata in Italia. Un'iniziativa di SATE S.R.L. — dal 1956 leader mondiale di linee automatiche per packaging di lusso.</p>
+        <p class="footer-tag">AI sovrana per l'automazione industriale. Un'iniziativa di SATE S.R.L. — dal 1956 leader mondiale di linee automatiche per packaging di lusso.</p>
         <p class="legal-line">SATE S.R.L. — P.IVA / CF 01132460476 — REA PT-121825<br />Via Quattro Querci 7, fraz. Masotti, 51030 Serravalle Pistoiese (PT), Italia<br />post@rem.sate.eu — Tel. 0573 51045</p>
       </div>
       <div>
         <h4>Prodotto</h4>
-        <ul><li><a href="#modelli">Modelli</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#compliance">Compliance</a></li><li><a href="https://docs.sate-sovereign.eu">Documentazione</a></li></ul>
+        <ul><li><a href="#chi">Chi è per</a></li><li><a href="#roi">ROI</a></li><li><a href="#robotica">Robotica</a></li><li><a href="#pricing">Pricing</a></li></ul>
       </div>
       <div>
         <h4>Azienda</h4>
@@ -409,7 +600,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 SATE S.R.L. — Tutti i diritti riservati</div>
+      <div>© 2026 SATE S.R.L. — Tutti i diritti riservati. Tutti i marchi citati appartengono ai rispettivi proprietari.</div>
       <div>Made in Tuscany</div>
     </div>
   </div>
@@ -423,7 +614,6 @@
   const ctx = canvas.getContext('2d');
   let W, H, particles, raf;
   const isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   function resize(){
     const r = hero.getBoundingClientRect();
     W = canvas.width = r.width * devicePixelRatio;
@@ -437,13 +627,7 @@
     const count = Math.min(70, Math.floor((W*H)/40000));
     particles = [];
     for (let i=0; i<count; i++) {
-      particles.push({
-        x: Math.random() * (W/devicePixelRatio),
-        y: Math.random() * (H/devicePixelRatio),
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        r: Math.random() * 1.6 + 0.6,
-      });
+      particles.push({ x: Math.random()*(W/devicePixelRatio), y: Math.random()*(H/devicePixelRatio), vx: (Math.random()-0.5)*0.3, vy: (Math.random()-0.5)*0.3, r: Math.random()*1.6+0.6 });
     }
   }
   function tick(){
@@ -451,62 +635,49 @@
     ctx.clearRect(0, 0, w, h);
     for (let p of particles) {
       p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > w) p.vx *= -1;
-      if (p.y < 0 || p.y > h) p.vy *= -1;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
-      ctx.fillStyle = 'rgba(212, 165, 116, 0.55)';
-      ctx.fill();
+      if (p.x<0||p.x>w) p.vx*=-1; if (p.y<0||p.y>h) p.vy*=-1;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba(212,165,116,0.55)'; ctx.fill();
     }
     const maxDist = 130;
     for (let i=0; i<particles.length; i++){
       for (let j=i+1; j<particles.length; j++){
-        const a = particles[i], b = particles[j];
-        const dx = a.x-b.x, dy = a.y-b.y;
-        const d2 = dx*dx + dy*dy;
-        if (d2 < maxDist*maxDist) {
-          const alpha = (1 - Math.sqrt(d2)/maxDist) * 0.25;
-          ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(212, 165, 116, ${alpha})`;
-          ctx.lineWidth = 0.6;
-          ctx.stroke();
+        const a=particles[i], b=particles[j], dx=a.x-b.x, dy=a.y-b.y, d2=dx*dx+dy*dy;
+        if (d2<maxDist*maxDist) {
+          const alpha=(1-Math.sqrt(d2)/maxDist)*0.25;
+          ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y);
+          ctx.strokeStyle=`rgba(212,165,116,${alpha})`; ctx.lineWidth=0.6; ctx.stroke();
         }
       }
     }
     raf = requestAnimationFrame(tick);
   }
-  if (!isReduced) {
-    resize();
-    window.addEventListener('resize', () => { cancelAnimationFrame(raf); resize(); tick(); });
-    tick();
-  }
+  if (!isReduced) { resize(); window.addEventListener('resize', () => { cancelAnimationFrame(raf); resize(); tick(); }); tick(); }
 })();
 
 (function(){
   const stream = document.getElementById('token-stream');
   if (!stream || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const tokens = [
-    'tokenize', 'attention', '/v1/chat/completions', 'GDPR', 'embed', 'context: 128k', 'Q4_K_M',
-    'sovereign', 'rag', 'multi-tenant', 'streaming', 'tool_call', 'EU-only', 'tensor_parallel',
-    'vLLM', 'AI Act', 'inference', 'sub-2µs', '256 GB', 'NIS2', 'open-weight', 'Mistral',
-    'DeepSeek V3', 'Llama 4', 'Qwen', 'POST /v1', 'temperature: 0.7', 'top_p: 0.95',
-    'role: assistant', 'role: user', 'finish_reason: stop', 'function_call', 'system_prompt'
+    'FB_Conveyor', 'IF NOT bSafety', 'MOVE_J p1, v1000', 'TON Timer1', 'OPC UA',
+    'MovL p[1] V100', 'CALL FC_PID', 'SET DO[5]', 'WaitTime 500', 'IEC 61131-3',
+    'ST: VAR_INPUT', 'KRL: PTP HOME', 'RAPID: MoveL', 'GRAFCET', 'PLCopen',
+    'TIA Portal', 'CODESYS V3.5', 'ROS 2 Humble', 'EtherCAT', 'PROFINET',
+    'TwinCAT 3', 'FANUC Karel', 'palletizing', 'pick&place', 'force_feedback'
   ];
-  function spawnToken(){
+  function spawn(){
     const t = document.createElement('div');
     t.className = 'token';
     t.textContent = tokens[Math.floor(Math.random()*tokens.length)];
-    t.style.left = (Math.random() * 100) + '%';
+    t.style.left = (Math.random()*100)+'%';
     t.style.bottom = '-30px';
-    const dur = 14 + Math.random() * 12;
-    t.style.animationDuration = dur + 's';
+    const dur = 14+Math.random()*12;
+    t.style.animationDuration = dur+'s';
     stream.appendChild(t);
-    setTimeout(() => t.remove(), dur * 1000 + 200);
+    setTimeout(() => t.remove(), dur*1000+200);
   }
-  for (let i=0; i<6; i++) setTimeout(spawnToken, i * 1500);
-  setInterval(spawnToken, 2200);
+  for (let i=0; i<6; i++) setTimeout(spawn, i*1500);
+  setInterval(spawn, 2000);
 })();
 </script>
 
