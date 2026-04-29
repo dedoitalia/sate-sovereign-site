@@ -8,202 +8,90 @@
 <meta property="og:title" content="SATE Sovereign — AI Inference Sovrana EU" />
 <meta property="og:description" content="LLM API hosted in Italy. GDPR-native. 35-60% cheaper than US hyperscalers." />
 <meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAjBAMAAADhxRxoAAAAD1BMVEUAAACxJzC5NzmwKzQAAADit0TfAAAABHRSTlMA+Q1mGPmU5QAAAilJREFUeNqdlj9z4jAQxX8rU0AD4q5PxKS56s58/+9wQ3ndyamSJohLkaRAusIWyLaEx+wMA/q3rN97+2QBzIkkwj8ff9ZN0DYOdo5BHA2NHk6qYb40GuSdmaGoivlqwJvZCX8WlxoANzuhLa1IxKQQofuMMCyEb7nxxR1SW7sfz+4cPB5yB/aWIHAcTG8Jt2CoTkvkb3bpdYlbwY9lel6FFXzexBAe8isaageHHsj+Nk7tMVfkxNXwLQPvRIVFTsLz4RYrxYQ6K14DCgXiZyUU0Un3mgQv0QSnNiMN9FhWo1pkb3sbfHKQR2dFD3UzIRsRDdFTql+/r5ys4diK0ZUTPo3cRqo1BNc9q2x0bMUOCtGooy8lNHY7IuXsQOJIy/tzwolHhUsP5h8ww3LIdTDGgu80U8+UTR+i7+2X1WAMeAeHmQnFXYp00VFVBTgLJt8rqYVlQHg6dyx7fXGXiP2IlSmW+/UG3W3fOeQNUH47cLAJHS56cn5ooFIejNWtBXg1aKABYmaiQlm3jag28Ohs1zFzKlRZX1JCNEJjQM9geZFN768E2ka3KMywr6TCc3xNgOqqDO+5MyF7qDwYDedkx4zbvuqPPoAPcF9gussprODFXHmYuKQWMkT8rfsb12nFbC26pJv9aKEa+c9nW1V4ie34uqT6CtkKzZ/V5CUlkROV9OvZz7CvQazpOPGpf9zNMicLWAvO9NRu7kx4urwZXPvXGMqsjOI/U3PQ/2aNysQAAAAASUVORK5CYII=" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --navy: #0a1f3d;
-    --navy-deep: #051026;
-    --blue: #1e4a8a;
-    --accent: #c41e3a;
-    --accent-soft: #e63946;
-    --gold: #d4a574;
-    --bg: #fafbfc;
-    --bg-card: #ffffff;
-    --text: #0a1f3d;
-    --text-soft: #4a5568;
-    --text-mute: #718096;
-    --border: #e2e8f0;
-    --green: #2f855a;
+    --navy: #0a1f3d; --navy-deep: #051026; --blue: #1e4a8a;
+    --accent: #af2730; --accent-soft: #c93a44; --gold: #d4a574;
+    --bg: #fafbfc; --bg-card: #ffffff;
+    --text: #0a1f3d; --text-soft: #4a5568; --text-mute: #718096;
+    --border: #e2e8f0; --green: #2f855a;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
   .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 
-  header {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav {
-    display: flex; align-items: center; justify-content: space-between;
-    height: 68px;
-  }
-  .logo {
-    display: flex; align-items: center; gap: 10px;
-    font-weight: 800; font-size: 18px; letter-spacing: -0.02em;
-  }
-  .logo-mark {
-    width: 32px; height: 32px;
-    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
-    border-radius: 7px;
-    display: flex; align-items: center; justify-content: center;
-    color: white; font-weight: 800; font-size: 13px;
-    box-shadow: 0 2px 8px rgba(10,31,61,0.25);
-  }
-  .logo-text small { display: block; font-size: 10px; font-weight: 500; color: var(--text-mute); letter-spacing: 0.08em; text-transform: uppercase; }
+  header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+  .logo { display: flex; align-items: center; gap: 14px; }
+  .logo-img { height: 32px; width: auto; display: block; }
+  .logo-divider { width: 1px; height: 28px; background: var(--border); }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+  .logo-text strong { font-size: 14px; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
+  .logo-text small { font-size: 10px; font-weight: 500; color: var(--text-mute); letter-spacing: 0.1em; text-transform: uppercase; }
   .nav-links { display: flex; gap: 32px; align-items: center; }
   .nav-links a { color: var(--text-soft); font-size: 14px; font-weight: 500; transition: color .15s; }
   .nav-links a:hover { color: var(--navy); }
-  .btn {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 10px 18px; border-radius: 8px;
-    font-weight: 600; font-size: 14px;
-    transition: all .2s; cursor: pointer; border: none;
-  }
-  .btn-primary { background: var(--navy); color: white; }
-  .btn-primary:hover { background: var(--navy-deep); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(10,31,61,0.3); }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: all .2s; cursor: pointer; border: none; }
+  .btn-primary { background: var(--accent); color: white; }
+  .btn-primary:hover { background: #8e1f27; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(175,39,48,0.3); }
   .btn-ghost { background: transparent; color: var(--text-soft); border: 1px solid var(--border); }
   .btn-ghost:hover { border-color: var(--navy); color: var(--navy); }
 
-  .hero {
-    padding: 90px 0 80px;
-    background:
-      radial-gradient(ellipse at top right, rgba(30,74,138,0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom left, rgba(196,30,58,0.05) 0%, transparent 50%),
-      var(--bg);
-    position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background-image:
-      linear-gradient(rgba(10,31,61,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(10,31,61,0.04) 1px, transparent 1px);
-    background-size: 56px 56px;
-    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
-  }
+  .hero { padding: 100px 0 90px; background: radial-gradient(ellipse at top right, rgba(30,74,138,0.08) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(175,39,48,0.06) 0%, transparent 50%), var(--bg); position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(10,31,61,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(10,31,61,0.04) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); }
   .hero-inner { position: relative; max-width: 880px; }
-  .badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 6px 14px; border-radius: 999px;
-    background: rgba(30,74,138,0.08); color: var(--blue);
-    font-size: 13px; font-weight: 600;
-    margin-bottom: 28px;
-    border: 1px solid rgba(30,74,138,0.15);
-  }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(175,39,48,0.08); color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 28px; border: 1px solid rgba(175,39,48,0.15); }
   .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-  h1 {
-    font-size: clamp(36px, 5.5vw, 64px);
-    font-weight: 800; letter-spacing: -0.03em; line-height: 1.05;
-    margin-bottom: 22px;
-  }
-  h1 .highlight {
-    background: linear-gradient(120deg, var(--navy) 0%, var(--blue) 60%, var(--accent) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .hero p.lead {
-    font-size: clamp(17px, 1.5vw, 20px);
-    color: var(--text-soft);
-    max-width: 680px;
-    margin-bottom: 36px;
-  }
+  h1 { font-size: clamp(36px, 5.5vw, 64px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 22px; }
+  h1 .highlight { background: linear-gradient(120deg, var(--navy) 0%, var(--blue) 50%, var(--accent) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p.lead { font-size: clamp(17px, 1.5vw, 20px); color: var(--text-soft); max-width: 680px; margin-bottom: 36px; }
   .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
   .btn-lg { padding: 14px 24px; font-size: 15px; }
-  .hero-meta {
-    margin-top: 56px; display: flex; gap: 40px; flex-wrap: wrap;
-    padding-top: 32px; border-top: 1px solid var(--border);
-  }
-  .meta-item .num {
-    font-size: 28px; font-weight: 800; color: var(--navy); letter-spacing: -0.02em;
-    font-family: 'JetBrains Mono', monospace;
-  }
+  .hero-meta { margin-top: 56px; display: flex; gap: 40px; flex-wrap: wrap; padding-top: 32px; border-top: 1px solid var(--border); }
+  .meta-item .num { font-size: 28px; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; font-family: 'JetBrains Mono', monospace; }
   .meta-item .lbl { font-size: 13px; color: var(--text-mute); margin-top: 2px; }
 
   section { padding: 88px 0; }
-  .section-tag {
-    font-size: 12px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.12em; color: var(--accent);
-    margin-bottom: 14px;
-  }
-  h2 {
-    font-size: clamp(28px, 3.5vw, 40px);
-    font-weight: 800; letter-spacing: -0.025em; line-height: 1.15;
-    margin-bottom: 20px;
-  }
+  .section-tag { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 14px; }
+  h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px; }
   .section-head { max-width: 720px; margin-bottom: 56px; }
   .section-head p { color: var(--text-soft); font-size: 17px; }
 
   .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   @media (max-width: 860px) { .why-grid { grid-template-columns: 1fr; } }
-  .why-card {
-    background: var(--bg-card); padding: 32px;
-    border: 1px solid var(--border); border-radius: 14px;
-    transition: all .2s;
-  }
-  .why-card:hover { border-color: var(--navy); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,31,61,0.08); }
-  .why-icon {
-    width: 44px; height: 44px; border-radius: 10px;
-    background: linear-gradient(135deg, var(--navy), var(--blue));
-    color: white; display: flex; align-items: center; justify-content: center;
-    margin-bottom: 18px; font-size: 20px;
-  }
+  .why-card { background: var(--bg-card); padding: 32px; border: 1px solid var(--border); border-radius: 14px; transition: all .2s; }
+  .why-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,31,61,0.08); }
+  .why-icon { width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(135deg, var(--navy), var(--blue)); color: white; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; }
+  .why-card:nth-child(2) .why-icon { background: linear-gradient(135deg, var(--accent), #8e1f27); font-size: 22px; }
+  .why-card:nth-child(3) .why-icon { background: linear-gradient(135deg, var(--gold), #b8895e); font-size: 12px; }
   .why-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.01em; }
   .why-card p { color: var(--text-soft); font-size: 15px; }
 
   .models-section { background: white; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  .models-table {
-    width: 100%; border-collapse: collapse;
-    background: white; border-radius: 14px; overflow: hidden;
-    border: 1px solid var(--border);
-  }
-  .models-table th {
-    background: var(--navy); color: white; text-align: left;
-    padding: 16px 20px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
-  }
-  .models-table td {
-    padding: 18px 20px; border-bottom: 1px solid var(--border);
-    font-size: 15px;
-  }
+  .models-table { width: 100%; border-collapse: collapse; background: white; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+  .models-table th { background: var(--navy); color: white; text-align: left; padding: 16px 20px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; }
+  .models-table td { padding: 18px 20px; border-bottom: 1px solid var(--border); font-size: 15px; }
   .models-table tr:last-child td { border-bottom: none; }
   .models-table tr:nth-child(even) td { background: #fafbfc; }
   .model-name { font-weight: 600; color: var(--navy); }
   .model-name code { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-mute); display: block; margin-top: 2px; }
-  .pill {
-    display: inline-block; padding: 3px 10px; border-radius: 6px;
-    font-size: 12px; font-weight: 600;
-    background: rgba(30,74,138,0.1); color: var(--blue);
-    font-family: 'JetBrains Mono', monospace;
-  }
+  .pill { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; background: rgba(175,39,48,0.1); color: var(--accent); font-family: 'JetBrains Mono', monospace; }
 
   .pricing-section { background: var(--bg); }
   .price-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
   @media (max-width: 1000px) { .price-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .price-grid { grid-template-columns: 1fr; } }
-  .price-card {
-    background: white; border: 1px solid var(--border);
-    border-radius: 14px; padding: 28px;
-    display: flex; flex-direction: column;
-    transition: all .2s;
-  }
-  .price-card.featured {
-    border-color: var(--navy); background: var(--navy); color: white;
-    transform: scale(1.02);
-    box-shadow: 0 12px 32px rgba(10,31,61,0.2);
-  }
-  .price-card.featured .price-tier { color: var(--gold); }
+  .price-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; transition: all .2s; }
+  .price-card.featured { border-color: var(--accent); background: var(--navy); color: white; transform: scale(1.02); box-shadow: 0 12px 32px rgba(10,31,61,0.2); position: relative; }
+  .price-card.featured::before { content: ""; position: absolute; inset: 0; border-radius: 14px; border: 2px solid var(--accent); pointer-events: none; }
+  .price-card.featured .price-tier { color: var(--accent); }
   .price-card.featured .price-meta, .price-card.featured .price-list li { color: rgba(255,255,255,0.85); }
   .price-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(10,31,61,0.1); }
   .price-card.featured:hover { transform: scale(1.02) translateY(-4px); }
@@ -220,75 +108,35 @@
   .price-list li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
   .price-card.featured .price-list li::before { color: var(--gold); }
 
-  .compliance {
-    background: var(--navy);
-    color: white; padding: 64px 0;
-    position: relative; overflow: hidden;
-  }
-  .compliance::before {
-    content: ""; position: absolute; inset: 0;
-    background-image: radial-gradient(circle at 20% 50%, rgba(212,165,116,0.1) 0%, transparent 40%);
-  }
+  .compliance { background: var(--navy); color: white; padding: 80px 0; position: relative; overflow: hidden; }
+  .compliance::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 80% 30%, rgba(175,39,48,0.18) 0%, transparent 50%); }
   .compliance-inner { position: relative; }
   .compliance h2 { color: white; }
   .compliance .lead { color: rgba(255,255,255,0.8); }
   .badges-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
-  .comp-badge {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    padding: 12px 20px; border-radius: 10px;
-    font-size: 14px; font-weight: 600;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .comp-badge::before { content: "🛡"; font-size: 16px; }
+  .comp-badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 12px 20px; border-radius: 10px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+  .comp-badge::before { content: "✓"; color: var(--gold); font-weight: 800; }
 
-  .cta-section {
-    padding: 100px 0;
-    background: linear-gradient(135deg, var(--bg) 0%, white 100%);
-    text-align: center;
-    border-top: 1px solid var(--border);
-  }
-  .cta-card {
-    max-width: 720px; margin: 0 auto;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 56px 48px;
-    box-shadow: 0 20px 60px rgba(10,31,61,0.08);
-  }
+  .cta-section { padding: 100px 0; background: linear-gradient(135deg, var(--bg) 0%, white 100%); text-align: center; border-top: 1px solid var(--border); }
+  .cta-card { max-width: 720px; margin: 0 auto; background: white; border: 1px solid var(--border); border-radius: 20px; padding: 56px 48px; box-shadow: 0 20px 60px rgba(10,31,61,0.08); }
   .cta-card h2 { margin-bottom: 16px; }
   .cta-card p { color: var(--text-soft); margin-bottom: 32px; font-size: 17px; }
   .cta-form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-  .cta-form input {
-    padding: 14px 18px; border: 1px solid var(--border);
-    border-radius: 10px; font-size: 15px; min-width: 280px;
-    font-family: inherit; outline: none; transition: border-color .15s;
-  }
-  .cta-form input:focus { border-color: var(--navy); }
+  .cta-form input { padding: 14px 18px; border: 1px solid var(--border); border-radius: 10px; font-size: 15px; min-width: 280px; font-family: inherit; outline: none; transition: border-color .15s; }
+  .cta-form input:focus { border-color: var(--accent); }
 
-  footer {
-    background: var(--navy-deep); color: rgba(255,255,255,0.7);
-    padding: 56px 0 32px;
-    font-size: 14px;
-  }
-  .footer-grid {
-    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
-    margin-bottom: 40px;
-  }
+  footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 56px 0 32px; font-size: 14px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
   @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
   footer h4 { color: white; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; }
   footer ul { list-style: none; }
   footer li { padding: 4px 0; }
   footer a:hover { color: white; }
-  .footer-bottom {
-    padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);
-    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
-    color: rgba(255,255,255,0.5); font-size: 13px;
-  }
-  .footer-logo { color: white; font-weight: 700; margin-bottom: 12px; font-size: 18px; letter-spacing: -0.02em; }
+  .footer-bottom { padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: rgba(255,255,255,0.5); font-size: 13px; }
+  .footer-logo-img { height: 28px; width: auto; display: block; margin-bottom: 14px; opacity: 0.95; }
   .footer-tag { max-width: 320px; line-height: 1.6; }
 
-  code.inline { background: rgba(30,74,138,0.08); padding: 2px 8px; border-radius: 5px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--blue); }
+  code.inline { background: rgba(175,39,48,0.08); padding: 2px 8px; border-radius: 5px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); }
 </style>
 </head>
 <body>
@@ -296,9 +144,10 @@
 <header>
   <div class="container nav">
     <a href="#" class="logo">
-      <div class="logo-mark">S</div>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAjBAMAAADhxRxoAAAAD1BMVEUAAACxJzC5NzmwKzQAAADit0TfAAAABHRSTlMA+Q1mGPmU5QAAAilJREFUeNqdlj9z4jAQxX8rU0AD4q5PxKS56s58/+9wQ3ndyamSJohLkaRAusIWyLaEx+wMA/q3rN97+2QBzIkkwj8ff9ZN0DYOdo5BHA2NHk6qYb40GuSdmaGoivlqwJvZCX8WlxoANzuhLa1IxKQQofuMMCyEb7nxxR1SW7sfz+4cPB5yB/aWIHAcTG8Jt2CoTkvkb3bpdYlbwY9lel6FFXzexBAe8isaageHHsj+Nk7tMVfkxNXwLQPvRIVFTsLz4RYrxYQ6K14DCgXiZyUU0Un3mgQv0QSnNiMN9FhWo1pkb3sbfHKQR2dFD3UzIRsRDdFTql+/r5ys4diK0ZUTPo3cRqo1BNc9q2x0bMUOCtGooy8lNHY7IuXsQOJIy/tzwolHhUsP5h8ww3LIdTDGgu80U8+UTR+i7+2X1WAMeAeHmQnFXYp00VFVBTgLJt8rqYVlQHg6dyx7fXGXiP2IlSmW+/UG3W3fOeQNUH47cLAJHS56cn5ooFIejNWtBXg1aKABYmaiQlm3jag28Ohs1zFzKlRZX1JCNEJjQM9geZFN768E2ka3KMywr6TCc3xNgOqqDO+5MyF7qDwYDedkx4zbvuqPPoAPcF9gussprODFXHmYuKQWMkT8rfsb12nFbC26pJv9aKEa+c9nW1V4ie34uqT6CtkKzZ/V5CUlkROV9OvZz7CvQazpOPGpf9zNMicLWAvO9NRu7kx4urwZXPvXGMqsjOI/U3PQ/2aNysQAAAAASUVORK5CYII=" alt="SATE" class="logo-img" />
+      <div class="logo-divider"></div>
       <div class="logo-text">
-        SATE Sovereign
+        <strong>Sovereign</strong>
         <small>AI Inference EU</small>
       </div>
     </a>
@@ -358,7 +207,7 @@
         <p>Modelli open-weight di classe Llama, Qwen, DeepSeek, Mistral. Stessa qualità benchmarkata dei top USA, prezzo del 35-60% inferiore per token equivalente.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">⚙</div>
+        <div class="why-icon">API</div>
         <h3>Drop-in OpenAI compatibile</h3>
         <p>Endpoint <code class="inline">/v1/chat/completions</code> e <code class="inline">/v1/embeddings</code>. Cambia <code class="inline">base_url</code> e API key, e il tuo codice esistente continua a funzionare. Zero migrazione.</p>
       </div>
@@ -374,45 +223,13 @@
       <p>Selezione curata di modelli con licenza compatibile con uso commerciale. Quantizzazione Q4_K_M ottimizzata per banda di memoria del cluster.</p>
     </div>
     <table class="models-table">
-      <thead>
-        <tr>
-          <th>Modello</th>
-          <th>Parametri</th>
-          <th>Throughput</th>
-          <th>Caso d'uso ottimale</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Modello</th><th>Parametri</th><th>Throughput</th><th>Caso d'uso ottimale</th></tr></thead>
       <tbody>
-        <tr>
-          <td class="model-name">Llama 70B<code>sovereign-light-70b</code></td>
-          <td><span class="pill">70B</span></td>
-          <td>~45 t/s</td>
-          <td>Chat conversazionale, classificazione, generazione testi</td>
-        </tr>
-        <tr>
-          <td class="model-name">Llama / Mistral 120B<code>sovereign-pro-120b</code></td>
-          <td><span class="pill">120B</span></td>
-          <td>~30 t/s</td>
-          <td>Agenti real-time, analisi documentale, code generation</td>
-        </tr>
-        <tr>
-          <td class="model-name">Mistral Large v3<code>sovereign-rag-123b</code></td>
-          <td><span class="pill">123B</span></td>
-          <td>~32 t/s</td>
-          <td>RAG multilingua EU, sintesi documenti legali, compliance</td>
-        </tr>
-        <tr>
-          <td class="model-name">DeepSeek V3 (MoE)<code>sovereign-max-moe</code></td>
-          <td><span class="pill">671B</span></td>
-          <td>~18 t/s</td>
-          <td>Analisi strategica complessa, ragionamento multi-step</td>
-        </tr>
-        <tr>
-          <td class="model-name">Qwen 400B<code>sovereign-frontier-400b</code></td>
-          <td><span class="pill">400B</span></td>
-          <td>~7 t/s</td>
-          <td>Coding ad altissima complessità, ricerca scientifica</td>
-        </tr>
+        <tr><td class="model-name">Llama 70B<code>sovereign-light-70b</code></td><td><span class="pill">70B</span></td><td>~45 t/s</td><td>Chat conversazionale, classificazione, generazione testi</td></tr>
+        <tr><td class="model-name">Llama / Mistral 120B<code>sovereign-pro-120b</code></td><td><span class="pill">120B</span></td><td>~30 t/s</td><td>Agenti real-time, analisi documentale, code generation</td></tr>
+        <tr><td class="model-name">Mistral Large v3<code>sovereign-rag-123b</code></td><td><span class="pill">123B</span></td><td>~32 t/s</td><td>RAG multilingua EU, sintesi documenti legali, compliance</td></tr>
+        <tr><td class="model-name">DeepSeek V3 (MoE)<code>sovereign-max-moe</code></td><td><span class="pill">671B</span></td><td>~18 t/s</td><td>Analisi strategica complessa, ragionamento multi-step</td></tr>
+        <tr><td class="model-name">Qwen 400B<code>sovereign-frontier-400b</code></td><td><span class="pill">400B</span></td><td>~7 t/s</td><td>Coding ad altissima complessità, ricerca scientifica</td></tr>
       </tbody>
     </table>
   </div>
@@ -432,12 +249,7 @@
         <div class="price-meta">Modelli 70B</div>
         <div class="price-amount">€ 0,30<small>/M token input</small></div>
         <div class="price-divider"></div>
-        <ul class="price-list">
-          <li>€ 0,90/M token output</li>
-          <li>Compatibile OpenAI API</li>
-          <li>Rate limit: 60 req/min</li>
-          <li>~60% del prezzo GPT-4o mini</li>
-        </ul>
+        <ul class="price-list"><li>€ 0,90/M token output</li><li>Compatibile OpenAI API</li><li>Rate limit: 60 req/min</li><li>~60% del prezzo GPT-4o mini</li></ul>
       </div>
       <div class="price-card featured">
         <div class="price-tier">Tier 2 · più scelto</div>
@@ -445,12 +257,7 @@
         <div class="price-meta">Modelli 120B</div>
         <div class="price-amount">€ 0,80<small>/M token input</small></div>
         <div class="price-divider"></div>
-        <ul class="price-list">
-          <li>€ 2,40/M token output</li>
-          <li>Streaming + tool calling</li>
-          <li>Rate limit: 120 req/min</li>
-          <li>~50% del prezzo Claude Sonnet</li>
-        </ul>
+        <ul class="price-list"><li>€ 2,40/M token output</li><li>Streaming + tool calling</li><li>Rate limit: 120 req/min</li><li>~50% del prezzo Claude Sonnet</li></ul>
       </div>
       <div class="price-card">
         <div class="price-tier">Tier 3</div>
@@ -458,12 +265,7 @@
         <div class="price-meta">DeepSeek 671B / Qwen 400B</div>
         <div class="price-amount">€ 1,50<small>/M token input</small></div>
         <div class="price-divider"></div>
-        <ul class="price-list">
-          <li>€ 4,50/M token output</li>
-          <li>Context 128k token</li>
-          <li>Rate limit: 30 req/min</li>
-          <li>~35% del prezzo GPT-4o</li>
-        </ul>
+        <ul class="price-list"><li>€ 4,50/M token output</li><li>Context 128k token</li><li>Rate limit: 30 req/min</li><li>~35% del prezzo GPT-4o</li></ul>
       </div>
       <div class="price-card">
         <div class="price-tier">Enterprise</div>
@@ -471,12 +273,7 @@
         <div class="price-meta">Tenant isolato + SLA</div>
         <div class="price-amount">da € 1.200<small>/mese</small></div>
         <div class="price-divider"></div>
-        <ul class="price-list">
-          <li>Capacity reservation</li>
-          <li>SLA 99,5% contrattuale</li>
-          <li>Supporto dedicato IT</li>
-          <li>DPA personalizzato</li>
-        </ul>
+        <ul class="price-list"><li>Capacity reservation</li><li>SLA 99,5% contrattuale</li><li>Supporto dedicato IT</li><li>DPA personalizzato</li></ul>
       </div>
     </div>
   </div>
@@ -510,7 +307,7 @@
         <button type="submit" class="btn btn-primary btn-lg">Richiedi invito →</button>
       </form>
       <p style="font-size: 13px; color: var(--text-mute); margin-top: 22px; margin-bottom: 0;">
-        Oppure scrivi a <a href="mailto:sovereign@sate.eu" style="color: var(--blue); font-weight: 600;">sovereign@sate.eu</a>
+        Oppure scrivi a <a href="mailto:sovereign@sate.eu" style="color: var(--accent); font-weight: 600;">sovereign@sate.eu</a>
       </p>
     </div>
   </div>
@@ -520,33 +317,20 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo">SATE Sovereign</div>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAjBAMAAADhxRxoAAAAD1BMVEUAAAD///////////8AAACP/Ph6AAAABHRSTlMA+Qll5ZwAWwAAAj9JREFUeNqdlcF22jAQRa8EayzTdRVB9m3y//+Q035AnEHdE0HWjLuQ3QiwKYpWtiQ/j+a+GRmshgPF6I86PAW36x0yvJjExXgP7Nzl5BLPgclhpcV8vFM3rP0zo4d/BjSESkH/Y/ZXArCvjlDmlnZ5Q6wU7GaXPAA6/+0TPF1Nmk2CzX4izG0j9AYaykVLU/hgKkIH5mXq2PoLjoCrO7IxjodjqTMEZGng4bfjPYxOtADS0B8DgChYLkygpoVWJyK0ZgVNK5ikVUeezbuHPqabVOYE13OMLRFMnbWXydEdhzTZUBxeHBoEcDe8vb2G8iz0Tj4LRyiYJHYFlbtyaDYJ+rUKYM3PfdSSCba5oHIuGBbX3SauwHQ5Tae33o82VuijbhOYGxnrrgTt97M2Zz6G0vUBLMgbaKhrDg/nxhw/l0zaAq5G0Yo978TfYu4xDjyoT/BSFaFy3tvVB8iJS4B9gnVNB1vShbhu8stj50ACwAn6qKC3qWyvoJjCe2B7l10STMoPVltou/t9uASN26FArDdpiEcceBmLPcjdlbIEdAxAo1lxAqx14BOg4TBmYdKHk82hGOEzE6R/UzVUltPTr21mknVNZfsqAnwd6mQDixxtfKtrieeC3TMsyBdJr587fPiaoH0U6AEr4y2aK1kqcmhKa+6BfRBbMEGDzFIJrUxdo9fWeoU+jntvUfn1f8pGFG8SizB4LGrL6atQgJUfmJRbzP1ULgUPUTKTvfIlKheCB/VZr6hSDbC29wr+BeZh4qshjIvWAAAAAElFTkSuQmCC" alt="SATE" class="footer-logo-img" />
         <p class="footer-tag">Inferenza AI sovrana, ospitata in Italia. Un'iniziativa di SATE S.r.l. — dal 1956 leader mondiale di linee automatiche per packaging di lusso.</p>
       </div>
       <div>
         <h4>Prodotto</h4>
-        <ul>
-          <li><a href="#modelli">Modelli</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#compliance">Compliance</a></li>
-          <li><a href="https://docs.sate-sovereign.eu">Documentazione</a></li>
-        </ul>
+        <ul><li><a href="#modelli">Modelli</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#compliance">Compliance</a></li><li><a href="https://docs.sate-sovereign.eu">Documentazione</a></li></ul>
       </div>
       <div>
         <h4>Azienda</h4>
-        <ul>
-          <li><a href="https://www.sate.eu">SATE S.r.l.</a></li>
-          <li><a href="#contatti">Contatti</a></li>
-          <li><a href="mailto:sovereign@sate.eu">Email</a></li>
-        </ul>
+        <ul><li><a href="https://www.sate.eu">SATE S.r.l.</a></li><li><a href="#contatti">Contatti</a></li><li><a href="mailto:sovereign@sate.eu">Email</a></li></ul>
       </div>
       <div>
         <h4>Legal</h4>
-        <ul>
-          <li><a href="#">Privacy policy</a></li>
-          <li><a href="#">Terms of service</a></li>
-          <li><a href="#">DPA</a></li>
-        </ul>
+        <ul><li><a href="#">Privacy policy</a></li><li><a href="#">Terms of service</a></li><li><a href="#">DPA</a></li></ul>
       </div>
     </div>
     <div class="footer-bottom">
