@@ -30,126 +30,735 @@
   --text:#0a1f3d; --text-soft:#4a5568; --text-mute:#718096;
   --border:#e2e8f0; --green:#2f855a;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-.logo{display:flex;align-items:center;gap:14px}
-.logo-img{height:32px;width:auto;display:block}
-.logo-divider{width:1px;height:28px;background:var(--border)}
-.logo-text{display:flex;flex-direction:column;line-height:1.15}
-.logo-text strong{font-size:14px;font-weight:700;color:var(--navy);letter-spacing:-0.01em}
-.logo-text small{font-size:10px;font-weight:500;color:var(--text-mute);letter-spacing:0.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:24px;align-items:center}
-.nav-links a:not(.btn){color:var(--text-soft);font-size:14px;font-weight:500;transition:color .15s}
-.nav-links a:not(.btn):hover{color:var(--navy)}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:8px;font-weight:600;font-size:14px;transition:all .2s;cursor:pointer;border:none;text-decoration:none}
-a.btn-primary,.btn-primary{background:var(--accent);color:#fff}
-a.btn-primary:hover,.btn-primary:hover{background:#8e1f27;color:#fff;transform:translateY(-1px);box-shadow:0 4px 14px rgba(175,39,48,0.3)}
-.btn-ghost{background:transparent;color:var(--text-soft);border:1px solid var(--border)}
-.btn-ghost:hover{border-color:var(--navy);color:var(--navy)}
+/* HEADER / NAV */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+.logo-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--border);
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.logo-text strong {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+.logo-text small {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-mute);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.nav-links a:not(.btn) {
+  color: var(--text-soft);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+.nav-links a:not(.btn):hover {
+  color: var(--navy);
+}
 
-.hero{padding:100px 0 80px;background:var(--navy);position:relative;overflow:hidden;color:#fff;isolation:isolate}
-#mesh-canvas{position:absolute;inset:0;z-index:0;width:100%;height:100%;will-change:transform}
-.hero-aurora{position:absolute;inset:-20%;z-index:0;pointer-events:none;filter:blur(80px);opacity:0;transition:opacity .4s}
-body.no-webgl .hero-aurora{opacity:0.85}
-.blob{position:absolute;border-radius:50%;mix-blend-mode:screen;will-change:transform}
-.blob-1{width:50vw;height:50vw;background:linear-gradient(135deg,rgba(1,234,160,0.3),rgba(62,111,184,0.2));top:10%;left:-20%;animation:float 20s ease-in-out infinite}
-.blob-2{width:40vw;height:40vw;background:linear-gradient(135deg,rgba(175,39,48,0.25),rgba(212,165,116,0.15));top:40%;right:-15%;animation:float 25s ease-in-out infinite 2s}
-@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-60px)}}
-.hero-content{position:relative;z-index:1;max-width:900px}
-.hero h1{font-size:clamp(28px,6vw,64px);font-weight:700;line-height:1.2;margin-bottom:24px;text-shadow:0 2px 8px rgba(0,0,0,0.2)}
-.hero p{font-size:clamp(16px,2.5vw,22px);margin-bottom:32px;opacity:0.95;line-height:1.5}
-.hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.hero-cta .btn{color:#fff;border:1px solid rgba(255,255,255,0.3)}
-.hero-cta .btn:hover{background:rgba(255,255,255,0.1);border-color:#fff}
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+a.btn-primary, .btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+a.btn-primary:hover, .btn-primary:hover {
+  background: #8e1f27;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(175, 39, 48, 0.3);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--text-soft);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover {
+  border-color: var(--navy);
+  color: var(--navy);
+}
 
+/* HERO */
+.hero {
+  padding: 100px 0 80px;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  isolation: isolate;
+}
+#mesh-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+.hero-aurora {
+  position: absolute;
+  inset: -20%;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+body.no-webgl .hero-aurora {
+  opacity: 0.85;
+}
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+.blob-1 {
+  width: 50vw;
+  height: 50vw;
+  background: linear-gradient(135deg, rgba(1, 234, 160, 0.3), rgba(62, 111, 184, 0.2));
+  top: 10%;
+  left: -20%;
+  animation: float 20s ease-in-out infinite;
+}
+.blob-2 {
+  width: 40vw;
+  height: 40vw;
+  background: linear-gradient(135deg, rgba(175, 39, 48, 0.25), rgba(212, 165, 116, 0.15));
+  top: 40%;
+  right: -15%;
+  animation: float 25s ease-in-out infinite 2s;
+}
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -60px); }
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+.hero h1 {
+  font-size: clamp(28px, 6vw, 64px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.hero p {
+  font-size: clamp(16px, 2.5vw, 22px);
+  margin-bottom: 32px;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.hero-cta .btn {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.hero-cta .btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+/* FEATURES */
+section.features {
+  padding: 100px 0;
+  background: var(--bg);
+}
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-align: center;
+  color: var(--navy);
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+.feature-card {
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(10, 31, 61, 0.08);
+  border-color: var(--blue);
+}
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--blue), var(--accent));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--navy);
+}
+.feature-card p {
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* COMPATIBILITY */
+section.compatibility {
+  padding: 100px 0;
+  background: var(--bg-alt);
+}
+.compat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+.compat-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  height: 100px;
+}
+.compat-logo img {
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+/* PRICING */
+section.pricing {
+  padding: 100px 0;
+  background: var(--bg);
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+.pricing-card {
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  transition: all 0.3s;
+  position: relative;
+}
+.pricing-card.featured {
+  border-color: var(--accent);
+  transform: scale(1.05);
+  box-shadow: 0 16px 48px rgba(175, 39, 48, 0.15);
+}
+.pricing-card h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: var(--navy);
+}
+.pricing-amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.pricing-period {
+  color: var(--text-soft);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.pricing-features {
+  list-style: none;
+  margin-bottom: 32px;
+}
+.pricing-features li {
+  padding: 10px 0;
+  color: var(--text-soft);
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.pricing-features li:before {
+  content: '✓ ';
+  color: var(--green);
+  font-weight: 700;
+  margin-right: 8px;
+}
+.pricing-card .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* FAQ */
+section.faq {
+  padding: 100px 0;
+  background: var(--bg-alt);
+}
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  background: var(--bg-card);
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.faq-question {
+  padding: 20px;
+  background: var(--bg-card);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--navy);
+  transition: all 0.2s;
+}
+.faq-question:hover {
+  background: var(--bg-alt);
+  color: var(--accent);
+}
+.faq-question.active {
+  background: linear-gradient(135deg, rgba(175, 39, 48, 0.05), rgba(62, 111, 184, 0.05));
+  color: var(--accent);
+}
+.faq-arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+  font-size: 18px;
+}
+.faq-question.active .faq-arrow {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 20px;
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.faq-answer.active {
+  max-height: 500px;
+  padding: 0 20px 20px 20px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--navy);
+  color: #fff;
+  padding: 60px 0 24px;
+  text-align: center;
+}
+footer p {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 1024px) {
-  .hero{padding:80px 0 60px}
-  .hero h1{font-size:48px}
-  .hero p{font-size:18px}
-  .container{padding:0 20px}
+  .hero { padding: 80px 0 60px; }
+  .hero h1 { font-size: 48px; }
+  .hero p { font-size: 18px; }
+  .container { padding: 0 20px; }
 }
 
 @media (max-width: 768px) {
-  header{border-bottom:none}
-  .nav{height:auto;flex-wrap:wrap;padding:12px 0}
-  .logo{gap:10px;width:100%;margin-bottom:12px}
-  .logo-img{height:28px}
-  .logo-divider{display:none}
-  .logo-text{flex-direction:row;align-items:baseline;gap:8px}
-  .logo-text strong{font-size:12px}
-  .logo-text small{font-size:9px}
-  .nav-links{flex-direction:column;gap:12px;width:100%;margin-top:8px}
-  .nav-links a:not(.btn){font-size:13px}
-  .btn{padding:8px 14px;font-size:13px;gap:4px}
+  header { border-bottom: none; }
+  .nav {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+  .logo {
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .logo-img { height: 28px; }
+  .logo-divider { display: none; }
+  .logo-text {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .logo-text strong { font-size: 12px; }
+  .logo-text small { font-size: 9px; }
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .nav-links a:not(.btn) { font-size: 13px; }
+  .btn { padding: 8px 14px; font-size: 13px; gap: 4px; }
   
-  .hero{padding:60px 0 50px}
-  .hero h1{font-size:32px;margin-bottom:16px}
-  .hero p{font-size:15px;margin-bottom:24px}
-  .hero-cta{gap:12px;flex-direction:column}
-  .hero-cta .btn{width:100%}
-  .container{padding:0 16px}
-  .blob-1,.blob-2{width:70vw;height:70vw}
+  .hero { padding: 60px 0 50px; }
+  .hero h1 { font-size: 32px; margin-bottom: 16px; }
+  .hero p { font-size: 15px; margin-bottom: 24px; }
+  .hero-cta {
+    gap: 12px;
+    flex-direction: column;
+  }
+  .hero-cta .btn { width: 100%; }
+  .container { padding: 0 16px; }
+  .blob-1, .blob-2 { width: 70vw; height: 70vw; }
+  
+  section.features { padding: 60px 0; }
+  .section-title { font-size: 32px; margin-bottom: 40px; }
+  .features-grid { gap: 24px; }
+  .feature-card { padding: 24px; }
+  
+  section.pricing { padding: 60px 0; }
+  .pricing-grid { gap: 24px; }
+  .pricing-card { padding: 32px; }
+  .pricing-card.featured { transform: scale(1.02); }
+  .pricing-amount { font-size: 28px; }
+  
+  section.faq { padding: 60px 0; }
+  .faq-question { padding: 16px; }
+  .faq-answer { font-size: 13px; }
+  
+  footer { padding: 40px 0 20px; }
 }
 
 @media (max-width: 480px) {
-  .nav{padding:10px 0}
-  .logo{gap:8px;margin-bottom:10px}
-  .logo-img{height:24px}
-  .logo-text strong{font-size:11px}
-  .logo-text small{font-size:8px}
-  .nav-links{gap:8px;margin-top:6px}
-  .nav-links a:not(.btn){font-size:12px}
-  .btn{padding:6px 12px;font-size:12px}
+  .nav { padding: 10px 0; }
+  .logo {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .logo-img { height: 24px; }
+  .logo-text strong { font-size: 11px; }
+  .logo-text small { font-size: 8px; }
+  .nav-links { gap: 8px; margin-top: 6px; }
+  .nav-links a:not(.btn) { font-size: 12px; }
+  .btn { padding: 6px 12px; font-size: 12px; }
   
-  .hero{padding:40px 0 40px}
-  .hero h1{font-size:24px;margin-bottom:12px}
-  .hero p{font-size:13px;margin-bottom:20px}
-  .hero-cta{gap:10px}
-  .container{padding:0 12px}
-  .blob{display:none}
+  .hero { padding: 40px 0 40px; }
+  .hero h1 { font-size: 24px; margin-bottom: 12px; }
+  .hero p { font-size: 13px; margin-bottom: 20px; }
+  .hero-cta { gap: 10px; }
+  .container { padding: 0 12px; }
+  .blob { display: none; }
+  
+  section.features { padding: 40px 0; }
+  .section-title { font-size: 24px; margin-bottom: 24px; }
+  .features-grid { grid-template-columns: 1fr; gap: 16px; }
+  .feature-card { padding: 20px; }
+  
+  section.pricing { padding: 40px 0; }
+  .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
+  .pricing-card { padding: 24px; }
+  .pricing-card.featured { transform: scale(1); }
+  .pricing-amount { font-size: 24px; }
+  
+  section.faq { padding: 40px 0; }
+  .faq-question { padding: 14px; font-size: 14px; }
+  .faq-answer { font-size: 12px; max-height: 400px; }
+  
+  footer { padding: 30px 0 16px; }
+  footer p { font-size: 12px; }
 }
 </style>
 </head>
 <body class="no-webgl">
+
+<!-- HEADER -->
 <header class="container">
-<div class="nav">
-<div class="logo">
-<img class="logo-img" src="https://lirp.cdn-website.com/43b57a5e/dms3rep/multi/opt/Logo+-+nuovo-1920w.png" alt="SATE Sovereign" />
-<div class="logo-divider"></div>
-<div class="logo-text">
-<strong>SATE Sovereign</strong>
-<small>AI Industriale</small>
-</div>
-</div>
-<div class="nav-links">
-<a href="#features">Features</a>
-<a href="#pricing">Pricing</a>
-<a href="#faq">FAQ</a>
-<a href="https://www.sate.eu" class="btn btn-primary">Visit SATE.eu</a>
-</div>
-</div>
+  <div class="nav">
+    <div class="logo">
+      <img class="logo-img" src="https://lirp.cdn-website.com/43b57a5e/dms3rep/multi/opt/Logo+-+nuovo-1920w.png" alt="SATE Sovereign" />
+      <div class="logo-divider"></div>
+      <div class="logo-text">
+        <strong>SATE Sovereign</strong>
+        <small>AI Industriale</small>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://www.sate.eu" class="btn btn-primary">Visit SATE.eu</a>
+    </div>
+  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero container">
-<canvas id="mesh-canvas"></canvas>
-<div class="hero-aurora"></div>
-<div class="blob blob-1"></div>
-<div class="blob blob-2"></div>
-<div class="hero-content">
-<h1>Automazione Industriale Potenziata da AI</h1>
-<p>Genera codice PLC, robotica e documentazione tecnica in minuti, non settimane. Compatibile con Siemens, B&R, CODESYS, Rockwell e Beckhoff.</p>
-<div class="hero-cta">
-<a href="#contact" class="btn btn-primary">Inizia Gratis</a>
-<a href="https://www.sate.eu" class="btn btn-ghost">Scopri SATE.eu</a>
-</div>
-</div>
+  <canvas id="mesh-canvas"></canvas>
+  <div class="hero-aurora"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="hero-content">
+    <h1>Automazione Industriale Potenziata da AI</h1>
+    <p>Genera codice PLC, robotica e documentazione tecnica in minuti, non settimane. Compatibile con Siemens, B&R, CODESYS, Rockwell e Beckhoff.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">Inizia Gratis</a>
+      <a href="https://www.sate.eu" class="btn btn-ghost">Scopri SATE.eu</a>
+    </div>
+  </div>
 </section>
+
+<!-- FEATURES -->
+<section class="features container" id="features">
+  <h2 class="section-title">Perché SATE Sovereign</h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>5× Più Veloce</h3>
+      <p>Sviluppa in giorni ciò che richiederebbe settimane. Genera codice PLC corretto da subito, automatizza la documentazione tecnica.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>Sovrana e GDPR</h3>
+      <p>Ospitata in Italia, zero data exfiltration. Conforme AI Act, controllata da SATE. I tuoi algoritmi rimangono tuoi.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🤖</div>
+      <h3>OpenHands + Hermes</h3>
+      <p>Potenziata da OpenHands per l'orchestrazione autonoma e Hermes 3 per il ragionamento distribuito. Agenti collaborativi.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔧</div>
+      <h3>Multi-Platform</h3>
+      <p>Siemens, B&R, CODESYS, Rockwell, Beckhoff. Una sola piattaforma per tutte le architetture PLC e controllo industriale.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Robotica & Visione</h3>
+      <p>Genera anche codice di controllo per robot collaborativi e pipeline di computer vision. Da zero a deployment in ore.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Integrazione Continua</h3>
+      <p>CI/CD native per PLC. Versioning, test automatici, rollback a un click. Abbassa il rischio di deployment in produzione.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPATIBILITY -->
+<section class="compatibility container" id="compatibility">
+  <h2 class="section-title">Piattaforme Supportate</h2>
+  <div class="compat-grid">
+    <div class="compat-logo"><img src="https://cdn.worldvectorlogo.com/logos/siemens.svg" alt="Siemens" /></div>
+    <div class="compat-logo"><img src="https://cdn.worldvectorlogo.com/logos/br-automation.svg" alt="B&R" /></div>
+    <div class="compat-logo"><img src="https://cdn.worldvectorlogo.com/logos/rockwell-automation.svg" alt="Rockwell" /></div>
+    <div class="compat-logo"><img src="https://cdn.worldvectorlogo.com/logos/beckhoff.svg" alt="Beckhoff" /></div>
+    <div class="compat-logo"><img src="https://cdn.worldvectorlogo.com/logos/codesys.svg" alt="CODESYS" /></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing container" id="pricing">
+  <h2 class="section-title">Piani Pricing</h2>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <h3>Starter</h3>
+      <div class="pricing-amount">€99</div>
+      <div class="pricing-period">/ mese</div>
+      <ul class="pricing-features">
+        <li>Fino a 5 progetti PLC/mese</li>
+        <li>1 milione di token AI</li>
+        <li>Supporto via email</li>
+        <li>Documentazione auto-generata</li>
+      </ul>
+      <a href="#contact" class="btn btn-ghost">Inizia</a>
+    </div>
+    <div class="pricing-card featured">
+      <h3>Professional</h3>
+      <div class="pricing-amount">€299</div>
+      <div class="pricing-period">/ mese</div>
+      <ul class="pricing-features">
+        <li>Progetti illimitati</li>
+        <li>5 milioni di token AI</li>
+        <li>Supporto prioritario 24/7</li>
+        <li>Robotica + Visione</li>
+        <li>CI/CD nativo</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Scegli Pro</a>
+    </div>
+    <div class="pricing-card">
+      <h3>Enterprise</h3>
+      <div class="pricing-amount">Custom</div>
+      <div class="pricing-period">Contattaci</div>
+      <ul class="pricing-features">
+        <li>SLA dedicato</li>
+        <li>Token illimitati</li>
+        <li>Addestramento personalizzato</li>
+        <li>White-label option</li>
+        <li>On-premise deployment</li>
+      </ul>
+      <a href="mailto:sales@sate.eu" class="btn btn-ghost">Contatta Sales</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq container" id="faq">
+  <h2 class="section-title">Domande Frequenti</h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Come funziona la generazione del codice PLC?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Carichi la specifica del tuo sistema (diagrammi, requisiti, I/O list). SATE Sovereign analizza il contesto e genera codice IEC 61131-3 o linguaggio PLC specifico della piattaforma. Verifica sintassi, testa le logiche critiche, genera documentazione tecnica completa.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>É davvero sicuro per impianti in produzione?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Sì. Ogni output passa per verifiche: syntax validation, symbolic execution dei rami critici, analisi delle race condition, compatibilità delle librerie. Il codice che ricepi è testato. Per mission-critical, offriamo revisione umana garantita e SLA di disponibilità.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Quali PLC sono supportati?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Siemens S7-1200/1500, S7-300/400, TIA Portal. B&R Automation Studio. CODESYS 3.5+. Rockwell CompactLogix/ControlLogix. Beckhoff TwinCAT 2/3. Se il tuo PLC parla IEC 61131-3 o espone un'API standard, lo supportiamo già. Nuove piattaforme si onboardano in settimane.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Che cos'è OpenHands? E Hermes?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>OpenHands è un framework per agenti autonomi che orchestrano tool e decisioni. Hermes 3 è un LLM open-weight specializzato nel ragionamento a catena lungo e nel controllo di flussi complessi. Insieme garantiscono decomposizione automatica dei problemi e qualità superiore del codice generato.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>I miei dati rimangono privati?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Totalmente. Ospitati in Italia, zero sincronizzazione con cloud pubblici. I tuoi progetti, algoritmi, dati tecnici non escono mai da SATE. Log di audit compliance per audit normativo. Encryption at rest e in transit. GDPR nativo.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Quanto costa esattamente?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Piani Starter (€99/mese), Professional (€299/mese) e Enterprise (custom). Fatturazione mensile, nessun lock-in. Token pool ricarichiabile. Per aziende piccole abbiamo opzioni pay-per-project. Prova gratuita di 14 giorni per verificare il valore prima di pagare.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Come ottengo supporto tecnico?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Starter: email (24-48h). Professional: Slack dedicato + video call settimanale. Enterprise: SLA response-time, dedicated technical account manager. Base di conoscenza pubblica + webinar mensili per tutti i piani.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact container" id="contact" style="padding: 100px 0; text-align: center;">
+  <h2 class="section-title">Inizia Oggi</h2>
+  <p style="font-size: 18px; color: var(--text-soft); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+    Accedi gratuitamente. Prima di qualsiasi pagamento, potrai testare SATE Sovereign con 14 giorni di prova full-featured.
+  </p>
+  <a href="https://www.sate.eu/sovereign-register" class="btn btn-primary" style="padding: 16px 32px; font-size: 16px;">Crea il Tuo Account Gratuito</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="container">
+  <p>&copy; 2025 SATE S.r.l. — Automazione industriale potenziata da AI sovrana. Ospitata in Italia, GDPR-native, AI Act ready.</p>
+</footer>
 
 <script>
 (function(){
@@ -171,6 +780,31 @@ body.no-webgl .hero-aurora{opacity:0.85}
     canvas.width=window.innerWidth;
     canvas.height=window.innerHeight;
   },{passive:true});
+})();
+
+document.querySelectorAll('.faq-question').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const ans=q.nextElementSibling;
+    const isActive=q.classList.contains('active');
+    document.querySelectorAll('.faq-question').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.faq-answer').forEach(x=>x.classList.remove('active'));
+    if(!isActive){
+      q.classList.add('active');
+      ans.classList.add('active');
+    }
+  });
+});
+
+(function(){
+  let ticking=false;
+  function up(){
+    const y=window.scrollY;
+    document.querySelectorAll('[data-parallax]').forEach(el=>{
+      el.style.transform='translate3d(0,'+(y*0.4)+'px,0)';
+    });
+    ticking=false;
+  }
+  window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(up);ticking=true}},{passive:true});
 })();
 </script>
 </body>
