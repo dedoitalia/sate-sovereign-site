@@ -76,38 +76,41 @@ body.no-webgl .hero-aurora{opacity:0.85}
 }
 
 @media (max-width: 768px) {
-  .nav{height:auto;padding:16px 0}
-  .logo{flex-shrink:0}
+  header{border-bottom:none}
+  .nav{height:auto;flex-wrap:wrap;padding:12px 0}
+  .logo{gap:10px;width:100%;margin-bottom:12px}
   .logo-img{height:28px}
+  .logo-divider{display:none}
+  .logo-text{flex-direction:row;align-items:baseline;gap:8px}
   .logo-text strong{font-size:12px}
   .logo-text small{font-size:9px}
-  .nav-links{flex-direction:column;gap:12px;width:100%;margin-top:16px}
+  .nav-links{flex-direction:column;gap:12px;width:100%;margin-top:8px}
   .nav-links a:not(.btn){font-size:13px}
   .btn{padding:8px 14px;font-size:13px;gap:4px}
   
   .hero{padding:60px 0 50px}
   .hero h1{font-size:32px;margin-bottom:16px}
   .hero p{font-size:15px;margin-bottom:24px}
-  .hero-cta{gap:12px}
+  .hero-cta{gap:12px;flex-direction:column}
+  .hero-cta .btn{width:100%}
   .container{padding:0 16px}
+  .blob-1,.blob-2{width:70vw;height:70vw}
 }
 
 @media (max-width: 480px) {
-  header{border-bottom:none}
-  .nav{flex-wrap:wrap;height:auto;padding:12px 0}
-  .logo{gap:10px;width:100%;margin-bottom:12px}
+  .nav{padding:10px 0}
+  .logo{gap:8px;margin-bottom:10px}
   .logo-img{height:24px}
   .logo-text strong{font-size:11px}
   .logo-text small{font-size:8px}
-  .nav-links{width:100%;gap:8px}
+  .nav-links{gap:8px;margin-top:6px}
   .nav-links a:not(.btn){font-size:12px}
   .btn{padding:6px 12px;font-size:12px}
   
   .hero{padding:40px 0 40px}
   .hero h1{font-size:24px;margin-bottom:12px}
   .hero p{font-size:13px;margin-bottom:20px}
-  .hero-cta{flex-direction:column}
-  .hero-cta .btn{width:100%;justify-content:center}
+  .hero-cta{gap:10px}
   .container{padding:0 12px}
   .blob{display:none}
 }
